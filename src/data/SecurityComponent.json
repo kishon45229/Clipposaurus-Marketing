@@ -1,0 +1,42 @@
+{
+  "badgeText": "Military-Grade Security",
+  "title": "Your Privacy is",
+  "titleHighlight": "Non-Negotiable",
+  "description": "Built from the ground up with privacy-first architecture. We don't just promise security—we guarantee it.",
+  "features": [
+    {
+      "title": "Zero-Knowledge Encryption",
+      "stat": "AES-256",
+      "description": "Military-grade encryption happens on your device. We can't see your content even if we wanted to."
+    },
+    {
+      "title": "No Tracking",
+      "stat": "0 Logs",
+      "description": "We don't track, store, or analyze your activity. What you share stays between you and your recipient."
+    },
+    {
+      "title": "No Data Retention",
+      "stat": "Auto-Delete",
+      "description": "Content is automatically deleted after access or expiration. Nothing remains on our servers."
+    },
+    {
+      "title": "Time-Limited Access",
+      "stat": "Custom TTL",
+      "description": "Set your own expiration time. From minutes to days, you control how long content is available."
+    }
+  ],
+  "trustIndicators": [
+    {
+      "value": "256-bit",
+      "label": "Encryption"
+    },
+    {
+      "value": "0 Logs",
+      "label": "No Tracking"
+    },
+    {
+      "value": "100%",
+      "label": "Private"
+    }
+  ]
+}

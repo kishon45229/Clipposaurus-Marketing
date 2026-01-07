@@ -1,0 +1,31 @@
+{
+  "title": "How It",
+  "titleHighlight": "Works",
+  "description": "Share content in four simple steps. No accounts, no complexity, just pure privacy.",
+  "steps": [
+    {
+      "iconName": "Upload",
+      "title": "Create a Drop",
+      "description": "Upload text, code, or files. Everything is encrypted instantly on your device.",
+      "stepNumber": "01"
+    },
+    {
+      "iconName": "Key",
+      "title": "Get Your Key",
+      "description": "Receive a unique drop key. Share it securely with your other device or recipient.",
+      "stepNumber": "02"
+    },
+    {
+      "iconName": "Download",
+      "title": "Unlock & Access",
+      "description": "Enter the drop key on any device to decrypt and access your content.",
+      "stepNumber": "03"
+    },
+    {
+      "iconName": "CheckCircle",
+      "title": "Auto-Delete",
+      "description": "Content expires after access or time limit. Zero trace left on our servers.",
+      "stepNumber": "04"
+    }
+  ]
+}

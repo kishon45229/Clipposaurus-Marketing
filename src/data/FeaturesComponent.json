@@ -1,0 +1,36 @@
+{
+  "headline": "Built for Privacy & Speed",
+  "description": "Everything you need to share content securely across devices without compromising your privacy",
+  "features": [
+    {
+      "icon": "Lock",
+      "title": "End-to-End Encrypted",
+      "description": "Your content is encrypted on your device before upload. We never see your data."
+    },
+    {
+      "icon": "Timer",
+      "title": "Auto-Expiring Drops",
+      "description": "Set expiration times or one-time access. Content disappears automatically."
+    },
+    {
+      "icon": "Smartphone",
+      "title": "Cross-Device Sync",
+      "description": "Seamlessly move content between your phone, tablet, and computer."
+    },
+    {
+      "icon": "Zap",
+      "title": "Lightning Fast",
+      "description": "Share instantly without waiting. No upload limits, no compression."
+    },
+    {
+      "icon": "Code",
+      "title": "Developer Friendly",
+      "description": "Share code snippets with syntax highlighting and formatting preserved."
+    },
+    {
+      "icon": "Globe",
+      "title": "No Account Required",
+      "description": "Start sharing immediately. No sign-ups, no tracking, no hassle."
+    }
+  ]
+}

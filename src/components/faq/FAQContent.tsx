@@ -1,0 +1,36 @@
+import React from "react";
+import { useFAQ } from "@/context/FAQContext";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { FAQHeader } from "@/components/faq/FAQHeader";
+import { FAQCategory } from "@/components/faq/FAQCategory";
+import { StickyTOC } from "@/components/common/StickyTOC";
+
+export const FAQContent = (): React.ReactNode => {
+    const { data } = useFAQ();
+    const { categories } = data;
+
+    const categoryIds = React.useMemo(() =>
+        categories.map(category => `category-${category.id}`) || [],
+        [categories]
+    );
+
+    const items = React.useMemo(() =>
+        categories.map(category => ({ id: `category-${category.id}`, label: category.title })) || [],
+        [categories]
+    );
+
+    const activeSection = useScrollSpy(categoryIds, 120);
+
+    return (
+        <div className="mx-auto max-w-480px-4 py-2 grid grid-cols-1 lg:grid-cols-[240px_auto] gap-[clamp(2rem,5vw,2.5rem)]">
+            {/* Sticky TOC — Desktop only */}
+            <StickyTOC title="Categories" items={items} activeSection={activeSection} />
+
+            {/* Main content */}
+            <div className="max-w-7xl">
+                <FAQHeader />
+                <FAQCategory />
+            </div>
+        </div >
+    );
+};
