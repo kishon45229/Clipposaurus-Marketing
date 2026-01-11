@@ -1,26 +1,34 @@
 "use client";
 
-import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const FeatureSkeleton = () => {
     return (
-        <section className="w-full py-24 px-4 bg-white dark:bg-zinc-950">
-            <div className="max-w-7xl mx-auto">
-                {/* Header Skeleton */}
-                <div className="text-center mb-16 space-y-4">
-                    <Skeleton className="h-12 w-3/4 max-w-2xl mx-auto" />
-                    <Skeleton className="h-6 w-1/2 max-w-xl mx-auto" />
-                </div>
+        <section className="w-full h-[90dvh]">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent" />
 
-                {/* Features Grid Skeleton */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Header Skeleton */}
+            <div className="text-center mb-16 space-y-4">
+                <Skeleton className="h-12 w-3/4 max-w-2xl mx-auto" />
+                <Skeleton className="h-6 w-1/2 max-w-xl mx-auto" />
+            </div>
+
+            {/* FeatureGrid Skeleton */}
+            <div className="w-full max-w-7xl mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
                     {Array.from({ length: 6 }).map((_, index) => (
-                        <div key={index} className="p-8 rounded-2xl border-2 bg-gradient-to-br from-white to-zinc-50/50 dark:from-zinc-900 dark:to-zinc-900/50">
-                            <Skeleton className="h-14 w-14 rounded-xl mb-6" />
-                            <Skeleton className="h-6 w-3/4 mb-3" />
-                            <Skeleton className="h-4 w-full mb-2" />
-                            <Skeleton className="h-4 w-5/6" />
+                        <div key={index} className="relative group py-5 md:py-8 border-l border-zinc-200/60 dark:border-zinc-800/60">
+                            <div className="relative pl-10">
+                                <span className="absolute left-[-9px] top-12 w-4 h-4 rounded-full bg-emerald-500/80 shadow-[0_0_0_6px_rgba(16,185,129,0.15)] transition-all group-hover:scale-110" />
+
+                                <div className="mb-6">
+                                    <Skeleton className="w-8 h-8 rounded" />
+                                </div>
+
+                                <Skeleton className="h-8 w-3/4 mb-3" />
+                                <Skeleton className="h-4 w-full mb-2" />
+                                <Skeleton className="h-4 w-5/6" />
+                            </div>
                         </div>
                     ))}
                 </div>

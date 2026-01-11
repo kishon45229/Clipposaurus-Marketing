@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useSecurity } from "@/context/SecurityContext";
 
 export const SecurityHeader = () => {

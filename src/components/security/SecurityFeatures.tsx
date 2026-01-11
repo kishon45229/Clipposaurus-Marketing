@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Shield, Eye, Server, Clock } from "lucide-react";
 import { useSecurity } from "@/context/SecurityContext";
 
@@ -45,14 +44,14 @@ export const SecurityFeatures = () => {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-xl font-semibold text-white mb-3">
+                                <div className="text-xl font-semibold text-white mb-3">
                                     {feature.title}
-                                </h3>
+                                </div>
 
                                 {/* Description */}
-                                <p className="text-zinc-400 leading-relaxed">
+                                <div className="text-zinc-400 leading-relaxed">
                                     {feature.description}
-                                </p>
+                                </div>
 
                                 {/* Subtle scan line */}
                                 <span className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

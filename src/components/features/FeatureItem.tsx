@@ -33,13 +33,13 @@ export const FeatureItem = ({ feature }: FeatureItemProps) => {
             </div>
 
             {/* content */}
-            <h3 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
+            <div className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
                 {feature.title}
-            </h3>
+            </div>
 
-            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm">
+            <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm">
                 {feature.description}
-            </p>
+            </div>
         </div>
     );
 };

@@ -5,33 +5,32 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const HeroSkeleton = () => {
     return (
-        <div className="flex
-            flex-col
-            justify-between
-            gap-2
-            h-full
-            w-full
-            overflow-hidden">
-            {/* HeroHeader Skeleton */}
-            <div className="space-y-4">
-                <Skeleton className="h-32 w-3/4 max-w-2xl" />
-                <Skeleton className="h-32 w-1/2 max-w-2xl" />
-                <Skeleton className="h-18 w-full max-w-2xl" />
-            </div>
-
-            {/* HeroCTAs Skeleton */}
-            <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-5">
-                    <Skeleton className="h-12 w-full sm:w-auto min-w-[220px]" />
-                    <Skeleton className="h-4 w-8" />
-                    <Skeleton className="h-12 w-full sm:w-auto min-w-[220px]" />
+        <section className="flex flex-col justify-around w-full h-[90dvh]">
+            {/* <div className="content-inner"> */}
+                {/* HeroHeader Skeleton */}
+                <div className="text-center space-y-6">
+                    <Skeleton className="h-24 sm:h-20 w-3/4 max-w-3xl mx-auto" />
+                    <Skeleton className="h-16 w-1/2 max-w-2xl mx-auto" />
+                    <Skeleton className="h-12 w-full max-w-2xl mx-auto" />
                 </div>
-            </div>
 
-            {/* HeroFooter Skeleton */}
-            <div>
-                <Skeleton className="h-4 w-full max-w-md" />
-            </div>
-        </div>
+                {/* HeroCTAs Skeleton */}
+                <div className="flex flex-col items-center gap-8">
+                    <Skeleton className="h-16 w-full sm:w-auto min-w-[220px] rounded-2xl" />
+
+                    <div className="flex items-center gap-4 w-full max-w-xs">
+                        <Skeleton className="flex-1 h-px" />
+                        <Skeleton className="h-4 w-8" />
+                        <Skeleton className="flex-1 h-px" />
+                    </div>
+
+                    <Skeleton className="h-16 w-full sm:w-auto min-w-[220px] rounded-2xl" />
+                </div>
+
+                {/* HeroFooter Skeleton */}
+                <div className="text-center text-sm max-w-md mx-auto">
+                    <Skeleton className="h-4 w-full" />
+                </div>
+        </section>
     );
 };

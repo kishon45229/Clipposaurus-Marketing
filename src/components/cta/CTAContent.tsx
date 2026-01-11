@@ -7,7 +7,7 @@ import { BackgroundDecoration } from "@/components/cta/BackgroundDecoration";
 
 export const CTAContent = () => {
     return (
-        <section className="content-container">
+        <section className="h-fit py-12 px-4 overflow-hiddenrelative">
             <BackgroundDecoration />
 
             <div className="content-inner">

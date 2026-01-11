@@ -9,7 +9,7 @@ export const loadContentData = cache(async (componentId: string): Promise<unknow
 
   try {
     const findJsonTimeout: Promise<false> = getTimeout({
-      interval: 3000,
+      interval: 5000,
       errMsg: "JSON file search timeout",
     });
 

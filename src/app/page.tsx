@@ -16,30 +16,32 @@ export default async function Home(): Promise<React.ReactElement> {
   return (
     <ComponentDataProvider>
       <React.Suspense fallback={<LoadingFallback />}>
-        {/* Hero Section */}
+        <section className="flex flex-col gap-12">
+          {/* Hero Section */}
           <HeroProvider>
             <Hero />
           </HeroProvider>
 
-        {/* Features Section */}
-        <FeatureProvider>
-          <Features />
-        </FeatureProvider>
+          {/* Features Section */}
+          <FeatureProvider>
+            <Features />
+          </FeatureProvider>
 
-        {/* How It Works Section */}
-        <HowItWorksProvider>
-          <HowItWorks />
-        </HowItWorksProvider>
+          {/* How It Works Section */}
+          <HowItWorksProvider>
+            <HowItWorks />
+          </HowItWorksProvider>
 
-        {/* Security Section */}
-        <SecurityProvider>
-          <Security />
-        </SecurityProvider>
+          {/* Security Section */}
+          <SecurityProvider>
+            <Security />
+          </SecurityProvider>
 
-        {/* CTA Section */}
-        <CTAProvider>
-          <CTA />
-        </CTAProvider>
+          {/* CTA Section */}
+          <CTAProvider>
+            <CTA />
+          </CTAProvider>
+        </section>
       </React.Suspense>
     </ComponentDataProvider>
   );

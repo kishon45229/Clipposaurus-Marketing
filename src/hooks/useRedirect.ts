@@ -5,6 +5,7 @@ import {
   GITHUB_ISSUES_URL,
   GITHUB_SPONSOR_URL,
   CONTACT_EMAIL,
+  APP_URL,
 } from "@/lib/urls";
 
 interface RedirectsReturn {
@@ -27,6 +28,8 @@ interface RedirectsReturn {
   handleRedirectToGitHubDiscussions: () => void;
   handleRedirectToDiscord: () => void;
   handleRedirectToTwitter: () => void;
+  handleRedirectToCreateDrop: () => void;
+  handleRedirectToUnlockDrop: () => void;
 }
 
 export function useRedirects(): RedirectsReturn {
@@ -129,6 +132,16 @@ export function useRedirects(): RedirectsReturn {
     // Placeholder for Twitter link
   }, []);
 
+  // CREATE DROP
+  const handleRedirectToCreateDrop = React.useCallback(() => {
+    window.location.href = APP_URL + "/create-drop";
+  }, []);
+
+  // UNLOCK DROP
+  const handleRedirectToUnlockDrop = React.useCallback(() => {
+    window.location.href = APP_URL + "/unlock-drop";
+  }, []);
+
   return {
     handleRedictToCurrentPageHome,
     handleRedirectToDocs,
@@ -149,5 +162,7 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToGitHubDiscussions,
     handleRedirectToDiscord,
     handleRedirectToTwitter,
+    handleRedirectToCreateDrop,
+    handleRedirectToUnlockDrop,
   };
 }
