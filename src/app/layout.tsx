@@ -8,6 +8,8 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import TargetCursor from "@/components/TargetCursor";
 import { HeadTags } from "@/components/common/HeadTags";
+import { OfflineAlert } from "@/components/common/OfflineAlert";
+import { BetaNotice } from "@/components/common/BetaNotice";
 
 // Trigger env validation
 import env from "@/lib/env";
@@ -45,6 +47,8 @@ export default function RootLayout({
               spinDuration={2}
               hideDefaultCursor={true}
             />
+            <OfflineAlert />
+            <BetaNotice />
             <div className="flex flex-col">
               <div className="sticky top-0 z-50 shrink-0 h-[10dvh] w-full bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
                 <Navbar />
