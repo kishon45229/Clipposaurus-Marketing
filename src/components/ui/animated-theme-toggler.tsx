@@ -67,15 +67,14 @@ export const AnimatedThemeToggler = ({
       className={cn(className)}
       variant="ghost"
       size="icon"
+      suppressHydrationWarning
       {...props}
     >
-      {!mounted ? (
-        <Sun className="opacity-0" />
-      ) : theme === "dark" ? (
+      {mounted.current && (theme === "dark" ? (
         <Sun className="navbar-icon" />
       ) : (
         <Moon className="navbar-icon" />
-      )}
+      ))}
       <span className="sr-only">Toggle theme</span>
     </Button >
   )

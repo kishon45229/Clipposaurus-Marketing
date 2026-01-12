@@ -8,14 +8,13 @@ export const CTAHeader = () => {
 
     return (
         <div className="space-y-8 text-center">
-            <div className="text-5xl lg:text-6xl font-black text-white leading-tight">
+            <div className="text-4xl lg:text-5xl font-black text-zinc-900 dark:text-zinc-50">
                 {title}{" "}
                 <span className="text-emerald-400 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                     {titleHighlight}
                 </span>
             </div>
-
-            <div className="text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <div className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
                 {description}
             </div>
         </div>

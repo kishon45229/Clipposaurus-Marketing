@@ -39,7 +39,7 @@ export const HowItWorksSteps = () => {
                                 {/* Step header stack */}
                                 <div className="pt-6">
                                     {/* Step number */}
-                                    <span className="block text-7xl font-black text-zinc-100 dark:text-zinc-900 leading-none select-none">
+                                    <span className="block text-7xl font-black text-zinc-300 dark:text-zinc-900 leading-none select-none">
                                         {step.stepNumber}
                                     </span>
 

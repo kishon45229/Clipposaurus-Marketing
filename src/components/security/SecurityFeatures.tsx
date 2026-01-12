@@ -30,7 +30,7 @@ export const SecurityFeatures = () => {
                                 {/* Header row */}
                                 <div className="flex items-center justify-between mb-6">
                                     {/* Icon */}
-                                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-zinc-900/60 border border-zinc-800">
+                                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-400 dark:border-zinc-800">
                                         <Icon
                                             className="w-6 h-6 text-emerald-500"
                                             strokeWidth={2.5}
@@ -38,18 +38,18 @@ export const SecurityFeatures = () => {
                                     </div>
 
                                     {/* Stat */}
-                                    <span className="text-sm font-bold tracking-wider text-emerald-500">
+                                    <span className="text-sm font-bold tracking-wider text-zinc-600 dark:text-emerald-500">
                                         {feature.stat}
                                     </span>
                                 </div>
 
                                 {/* Title */}
-                                <div className="text-xl font-semibold text-white mb-3">
+                                <div className="text-xl font-semibold text-emerald-500 dark:text-zinc-50 mb-3">
                                     {feature.title}
                                 </div>
 
                                 {/* Description */}
-                                <div className="text-zinc-400 leading-relaxed">
+                                <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
                                     {feature.description}
                                 </div>
 

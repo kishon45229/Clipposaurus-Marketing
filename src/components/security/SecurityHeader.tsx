@@ -7,13 +7,13 @@ export const SecurityHeader = () => {
 
     return (
         <div className="text-center space-y-4">
-            <div className="text-4xl lg:text-5xl font-black text-white">
+            <div className="text-4xl lg:text-5xl font-black text-zinc-900 dark:text-zinc-50">
                 {data.title}
                 <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
                     {" "}{data.titleHighlight}
                 </span>
             </div>
-            <div className="text-lg text-zinc-400 max-w-2xl mx-auto">
+            <div className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
                 {data.description}
             </div>
         </div>

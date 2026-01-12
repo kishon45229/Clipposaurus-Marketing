@@ -12,7 +12,7 @@ export const FeatureGrid = () => {
                 {data.features.map((feature, index) => (
                     <div
                         key={index}
-                        className="relative group py-5 md:py-8 border-l border-zinc-200/60 dark:border-zinc-800/60"
+                        className="relative group py-5 md:py-8 border-l border-zinc-300 dark:border-zinc-800/60"
                     >
                         <FeatureItem feature={feature} />
                     </div>
