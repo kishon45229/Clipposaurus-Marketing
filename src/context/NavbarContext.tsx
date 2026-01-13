@@ -16,10 +16,6 @@ export interface NavbarContextValue {
     handleRedirectToGitHub: () => void;
     handleRedirectToFAQ: () => void;
     handleContactUs: () => void;
-    handleRedirectToFeatures: () => void;
-    handleRedirectToHowItWorks: () => void;
-    handleRedirectToSecurity: () => void;
-    handleRedirectToGitHubDiscussions: () => void;
     handleRedirectToGitHubIssues: () => void;
     handleRedirectToGitHubSponsor: () => void;
 }
@@ -32,7 +28,7 @@ interface NavbarProviderProps {
 
 export function NavbarProvider({ children }: NavbarProviderProps): React.ReactElement {
     const { data, isLoading, error } = useNavbarComponent();
-    const { handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToFeatures, handleRedirectToHowItWorks, handleRedirectToSecurity, handleRedirectToGitHubDiscussions, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useRedirects();
+    const { handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useRedirects();
 
     const contextValue: NavbarContextValue = React.useMemo(() => ({
         data,
@@ -44,13 +40,9 @@ export function NavbarProvider({ children }: NavbarProviderProps): React.ReactEl
         handleRedirectToGitHub,
         handleRedirectToFAQ,
         handleContactUs,
-        handleRedirectToFeatures,
-        handleRedirectToHowItWorks,
-        handleRedirectToSecurity,
-        handleRedirectToGitHubDiscussions,
         handleRedirectToGitHubIssues,
         handleRedirectToGitHubSponsor,
-    }), [data, isLoading, error, handleContactUs, handleRedirectToChangelog, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToFeatures, handleRedirectToGitHub, handleRedirectToGitHubDiscussions, handleRedirectToHowItWorks, handleRedirectToSecurity, handleRedirectToTermsOfService, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor]);
+    }), [data, isLoading, error, handleContactUs, handleRedirectToChangelog, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToGitHub, handleRedirectToTermsOfService, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor]);
 
     return (
         <NavbarContext.Provider value={contextValue}>
