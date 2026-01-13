@@ -7,6 +7,8 @@ import {
   FAQComponentSchema,
   TermsOfServiceComponentSchema,
   CTAComponentSchema,
+  NavbarComponentSchema,
+  FooterComponentSchema,
 } from "@/lib/schema";
 
 export const COMPONENT_SCHEMAS: Record<string, z.ZodSchema> = {
@@ -17,4 +19,6 @@ export const COMPONENT_SCHEMAS: Record<string, z.ZodSchema> = {
   CTAComponent: CTAComponentSchema,
   FAQComponent: FAQComponentSchema,
   TermsOfServiceComponent: TermsOfServiceComponentSchema,
+  FooterComponent: FooterComponentSchema,
+  NavbarComponent: NavbarComponentSchema,
 };

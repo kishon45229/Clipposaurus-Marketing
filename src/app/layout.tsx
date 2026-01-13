@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import "./globals.css";
 import { Provider as RollbarProvider } from "@rollbar/react";
+import { NavbarProvider } from "@/context/NavbarContext";
+import { FooterProvider } from "@/context/FooterContext";
+import { ComponentDataProvider } from "@/context/ComponentDataContext";
 import { clientConfig } from "@/lib/rollbar";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -50,13 +53,21 @@ export default function RootLayout({
             <OfflineAlert />
             <BetaNotice />
             <div className="flex flex-col">
-              <div className="sticky top-0 z-50 shrink-0 h-[10dvh] w-full bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
-                <Navbar />
-              </div>
-              {children}
-              <div>
-                <Footer />
-              </div>
+              <ComponentDataProvider>
+                <div className="sticky top-0 z-50 shrink-0 h-[10dvh] w-full bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
+                  <NavbarProvider>
+                    <Navbar />
+                  </NavbarProvider>
+                </div>
+                <div>
+                  {children}
+                </div>
+                <div>
+                  <FooterProvider>
+                    <Footer />
+                  </FooterProvider>
+                </div>
+              </ComponentDataProvider>
             </div>
           </ThemeProvider>
         </body>

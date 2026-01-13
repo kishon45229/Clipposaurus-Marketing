@@ -67,7 +67,7 @@ export const BetaNotice = () => {
                 <DialogFooter className="sm:justify-center">
                     <Button
                         onClick={handleAcknowledge}
-                        className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[clamp(0.85rem,2vw,1rem)] px-[clamp(1rem,4vw,1.5rem)] py-[clamp(0.5rem,2vw,0.65rem)] cursor-target"
+                        className="relative h-16 px-12 text-lg font-bold text-white bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-500 rounded-2xl shadow-[0_8px_30px_rgb(16,185,129,0.3)] hover:shadow-[0_12px_40px_rgb(16,185,129,0.4)] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed border border-emerald-400/20 cursor-target"
                     >
                         I Understand
                     </Button>

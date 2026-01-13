@@ -1,30 +1,30 @@
 import React from "react";
 
-interface FooterLink {
-    label: string;
-}
-
 interface FooterColumnProps {
-    title: string;
-    links: FooterLink[];
+    column: {
+        category: string;
+        links: string[]
+    };
     redirectHandlers: Record<string, () => void>;
 }
 
-export const FooterColumn = React.memo(({ title, links, redirectHandlers }: FooterColumnProps) => {
+export const FooterColumn = React.memo(({ column, redirectHandlers }: FooterColumnProps) => {
+    const { category, links } = column;
+
     return (
         <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-50 mb-4">
-                {title}
-            </h3>
+            <div className="text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-50 mb-4">
+                {category}
+            </div>
             <ul className="space-y-3">
-                {links.map((link) => (
-                    <li key={link.label}>
+                {links.map((link, index) => (
+                    <li key={index}>
                         <button
-                            onClick={redirectHandlers[link.label]}
-                            className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors duration-200"
+                            onClick={redirectHandlers[link]}
+                            className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-500 hover:font-semibold transition-colors duration-200 cursor-target"
                             type="button"
                         >
-                            <span>{link.label}</span>
+                            <span>{link}</span>
                         </button>
                     </li>
                 ))}
@@ -33,4 +33,4 @@ export const FooterColumn = React.memo(({ title, links, redirectHandlers }: Foot
     );
 });
 
-FooterColumn.displayName = "FooterColumn";
+FooterColumn.displayName = 'FooterColumn';

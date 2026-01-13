@@ -9,8 +9,10 @@ import { FeaturesComponent } from "@/types";
 import { HowItWorksComponent } from "@/types";
 import { SecurityComponent } from "@/types";
 import { CTAComponent } from "@/types";
+import type { FooterComponent } from "@/components/footer/footer.types";
+import type { NavbarComponent } from "@/components/navbar/navbar.types";
 
-export type ComponentDataType = HeroComponent | TermsOfServiceComponent | FAQComponent | FeaturesComponent | HowItWorksComponent | SecurityComponent | CTAComponent;
+export type ComponentDataType = HeroComponent | TermsOfServiceComponent | FAQComponent | FeaturesComponent | HowItWorksComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent;
 
 export type ComponentTypeMap = {
     HeroComponent: HeroComponent;
@@ -20,6 +22,8 @@ export type ComponentTypeMap = {
     HowItWorksComponent: HowItWorksComponent;
     SecurityComponent: SecurityComponent;
     CTAComponent: CTAComponent;
+    FooterComponent: FooterComponent;
+    NavbarComponent: NavbarComponent;
 };
 
 interface ComponentDataContextType {
@@ -233,5 +237,37 @@ export function useCTAComponent() {
         data: cachedData.CTAComponent as CTAComponent,
         isLoading: loadingStates.CTAComponent || false,
         error: errorStates.CTAComponent,
+    };
+}
+
+export function useNavbarComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.NavbarComponent && !loadingStates.NavbarComponent && !errorStates.NavbarComponent) {
+            getComponentData("NavbarComponent").catch(console.error);
+        }
+    }, [cachedData.NavbarComponent, loadingStates.NavbarComponent, errorStates.NavbarComponent, getComponentData]);
+
+    return {
+        data: cachedData.NavbarComponent as NavbarComponent,
+        isLoading: loadingStates.NavbarComponent || false,
+        error: errorStates.NavbarComponent,
+    };
+}
+
+export function useFooterComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.FooterComponent && !loadingStates.FooterComponent && !errorStates.FooterComponent) {
+            getComponentData("FooterComponent").catch(console.error);
+        }
+    }, [cachedData.FooterComponent, loadingStates.FooterComponent, errorStates.FooterComponent, getComponentData]);
+
+    return {
+        data: cachedData.FooterComponent as FooterComponent,
+        isLoading: loadingStates.FooterComponent || false,
+        error: errorStates.FooterComponent,
     };
 }
