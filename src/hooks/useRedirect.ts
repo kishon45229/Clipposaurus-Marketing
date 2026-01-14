@@ -18,16 +18,7 @@ interface RedirectsReturn {
   handleRedirectToTermsOfService: () => void;
   handleContactUs: () => void;
   handleRedirectToGitHubSponsor: () => void;
-  handleRedirectToFeatures: () => void;
-  handleRedirectToHowItWorks: () => void;
-  handleRedirectToSecurity: () => void;
-  handleRedirectToPrivacyPolicy: () => void;
-  handleRedirectToCookiePolicy: () => void;
-  handleRedirectToAcceptableUse: () => void;
-  handleRedirectToApiReference: () => void;
   handleRedirectToGitHubDiscussions: () => void;
-  handleRedirectToDiscord: () => void;
-  handleRedirectToTwitter: () => void;
   handleRedirectToCreateDrop: () => void;
   handleRedirectToUnlockDrop: () => void;
 }
@@ -53,7 +44,7 @@ export function useRedirects(): RedirectsReturn {
     window.open(GITHUB_ISSUES_URL, "_blank", "noopener noreferrer");
   }, []);
 
-  // GITHUB ISSUES
+  // GITHUB SPONSOR
   const handleRedirectToGitHubSponsor = React.useCallback(() => {
     window.open(GITHUB_SPONSOR_URL, "_blank", "noopener noreferrer");
   }, []);
@@ -78,41 +69,6 @@ export function useRedirects(): RedirectsReturn {
     window.location.href = `mailto:${CONTACT_EMAIL}`;
   }, []);
 
-  // FEATURES
-  const handleRedirectToFeatures = React.useCallback(() => {
-    window.location.href = "/#features";
-  }, []);
-
-  // HOW IT WORKS
-  const handleRedirectToHowItWorks = React.useCallback(() => {
-    window.location.href = "/#how-it-works";
-  }, []);
-
-  // SECURITY
-  const handleRedirectToSecurity = React.useCallback(() => {
-    window.location.href = "/#security";
-  }, []);
-
-  // PRIVACY POLICY
-  const handleRedirectToPrivacyPolicy = React.useCallback(() => {
-    window.location.href = "/privacy-policy";
-  }, []);
-
-  // COOKIE POLICY
-  const handleRedirectToCookiePolicy = React.useCallback(() => {
-    window.location.href = "/cookie-policy";
-  }, []);
-
-  // ACCEPTABLE USE
-  const handleRedirectToAcceptableUse = React.useCallback(() => {
-    window.location.href = "/acceptable-use";
-  }, []);
-
-  // API REFERENCE
-  const handleRedirectToApiReference = React.useCallback(() => {
-    window.location.href = DOCS_URL + "/api";
-  }, []);
-
   // GITHUB DISCUSSIONS
   const handleRedirectToGitHubDiscussions = React.useCallback(() => {
     window.open(
@@ -120,16 +76,6 @@ export function useRedirects(): RedirectsReturn {
       "_blank",
       "noopener noreferrer"
     );
-  }, []);
-
-  // DISCORD (placeholder)
-  const handleRedirectToDiscord = React.useCallback(() => {
-    // Placeholder for Discord link
-  }, []);
-
-  // TWITTER (placeholder)
-  const handleRedirectToTwitter = React.useCallback(() => {
-    // Placeholder for Twitter link
   }, []);
 
   // CREATE DROP
@@ -152,16 +98,7 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToTermsOfService,
     handleContactUs,
     handleRedirectToGitHubSponsor,
-    handleRedirectToFeatures,
-    handleRedirectToHowItWorks,
-    handleRedirectToSecurity,
-    handleRedirectToPrivacyPolicy,
-    handleRedirectToCookiePolicy,
-    handleRedirectToAcceptableUse,
-    handleRedirectToApiReference,
     handleRedirectToGitHubDiscussions,
-    handleRedirectToDiscord,
-    handleRedirectToTwitter,
     handleRedirectToCreateDrop,
     handleRedirectToUnlockDrop,
   };

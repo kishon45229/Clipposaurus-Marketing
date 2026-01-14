@@ -13,6 +13,7 @@ import TargetCursor from "@/components/TargetCursor";
 import { HeadTags } from "@/components/common/HeadTags";
 import { OfflineAlert } from "@/components/common/OfflineAlert";
 import { BetaNotice } from "@/components/common/BetaNotice";
+import { siteMetadata } from "@/lib/siteMetadata";
 
 // Trigger env validation
 import env from "@/lib/env";
@@ -23,10 +24,7 @@ const funnelSans = Funnel_Sans({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Clipposaurus Documentation",
-  description: "Complete documentation for Clipposaurus - secure, ephemeral content sharing",
-};
+export { siteMetadata as metadata };
 
 export default function RootLayout({
   children,

@@ -3,6 +3,28 @@ import { ComponentDataProvider } from "@/context/ComponentDataContext";
 import { FAQContainer } from "@/components/faq/FAQContainer";
 import LoadingFallback from "@/app/loading";
 import { FAQProvider } from "@/context/FAQContext";
+import { FAQSchema } from "@/components/faq/FAQSchema";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "FAQ - Frequently Asked Questions",
+    description:
+        "Find answers to common questions about Clipposaurus secure file sharing, encryption, privacy, and how to use our zero-knowledge platform.",
+    keywords: [
+        "clipposaurus faq",
+        "file sharing questions",
+        "encryption faq",
+        "how to use clipposaurus",
+        "secure file sharing help",
+        "zero knowledge encryption questions",
+    ],
+    openGraph: {
+        title: "FAQ - Frequently Asked Questions | Clipposaurus",
+        description:
+            "Find answers to common questions about Clipposaurus secure file sharing",
+        type: "website",
+    },
+};
 
 /**
  * FAQ PAGE COMPONENT
@@ -13,6 +35,7 @@ export default function FAQPage(): React.ReactElement {
         <ComponentDataProvider>
             <React.Suspense fallback={<LoadingFallback />}>
                 <FAQProvider>
+                    <FAQSchema />
                     <section className="xl:min-h-screen max-w-480mx-auto py-2 sm:py-4">
                         <FAQContainer />
                     </section>
