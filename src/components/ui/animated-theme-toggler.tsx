@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
-import { ZCOOL_KuaiLe } from "next/font/google"
 
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {
