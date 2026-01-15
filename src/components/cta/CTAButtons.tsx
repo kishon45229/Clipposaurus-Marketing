@@ -1,25 +1,31 @@
 "use client";
 
-import { Plus, ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCTA } from "@/context/CTAContext";
 
 export const CTAButtons = () => {
     const { data } = useCTA();
-    const { buttonText } = data;
+    const { primaryAction, secondaryAction } = data;
 
     return (
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+        <div className="flex flex-col sm:flex-row gap-2">
             <Button
-                onClick={() => alert("Get Started clicked!")}
                 size="lg"
-                className="group h-16 px-12 text-lg font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 rounded-2xl shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transition-all duration-300 cursor-target"
+                className="group h-12 sm:h-14 w-1/2 px-6 sm:px-7 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl border border-emerald-500/60 shadow-[0_12px_40px_-18px_rgba(16,185,129,1)] transition-all duration-200 cursor-target"
             >
-                <span className="flex items-center gap-3">
-                    <Plus className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-                    <span>{buttonText}</span>
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                <span className="flex items-center gap-2">
+                    <Sparkles className="h-5 w-5" />
+                    {primaryAction}
+                    <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </span>
+            </Button>
+            <Button
+                size="lg"
+                variant="outline"
+                className="h-12 sm:h-14 w-1/2  px-6 sm:px-7 text-base font-semibold border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 hover:border-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 bg-white/60 dark:bg-zinc-900/60 cursor-target"
+            >
+                {secondaryAction}
             </Button>
         </div>
     );

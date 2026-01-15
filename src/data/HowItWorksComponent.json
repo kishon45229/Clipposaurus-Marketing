@@ -27,5 +27,9 @@
       "description": "Content expires after access or time limit. Zero trace left on our servers.",
       "stepNumber": "04"
     }
-  ]
+  ],
+  "cta": {
+    "primary": "Try It Now",
+    "secondary": "Learn More"
+  }
 }

@@ -21,6 +21,9 @@ interface RedirectsReturn {
   handleRedirectToGitHubDiscussions: () => void;
   handleRedirectToCreateDrop: () => void;
   handleRedirectToUnlockDrop: () => void;
+  handleRedirectToDocsEncryptionAndDecryption: () => void;
+  handleRedirectToDocsZeroKnowledgePolicy: () => void;
+  handleRedirectToDocsHowItWorks: () => void;
 }
 
 export function useRedirects(): RedirectsReturn {
@@ -88,6 +91,21 @@ export function useRedirects(): RedirectsReturn {
     window.location.href = APP_URL + "/unlock-drop";
   }, []);
 
+  // DOCS - ENCRYPTION AND DECRYPTION
+  const handleRedirectToDocsEncryptionAndDecryption = React.useCallback(() => {
+    window.location.href = DOCS_URL + "/encryption-and-decryption";
+  }, []);
+
+  // DOCS - ZERO KNOWLEDGE POLICY
+  const handleRedirectToDocsZeroKnowledgePolicy = React.useCallback(() => {
+    window.location.href = DOCS_URL + "/zero-knowledge-architecture";
+  }, []);
+
+  // DOCS - HOW IT WORKS
+  const handleRedirectToDocsHowItWorks = React.useCallback(() => {
+    window.location.href = DOCS_URL + "/how-it-works";
+  }, []);
+
   return {
     handleRedictToCurrentPageHome,
     handleRedirectToDocs,
@@ -101,5 +119,8 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToGitHubDiscussions,
     handleRedirectToCreateDrop,
     handleRedirectToUnlockDrop,
+    handleRedirectToDocsEncryptionAndDecryption,
+    handleRedirectToDocsZeroKnowledgePolicy,
+    handleRedirectToDocsHowItWorks,
   };
 }

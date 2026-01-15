@@ -2,12 +2,16 @@
 
 import React from "react";
 import { useHowItWorksComponent } from "@/context/ComponentDataContext";
-import { HowItWorksComponent } from "@/types";
+import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
+import { useRedirects } from "@/hooks/useRedirect";
 
 interface HowItWorksContextType {
-    data: HowItWorksComponent;
+    data: HowItWorksComponentType;
     isLoading: boolean;
     error: Error | null;
+
+    handleRedirectToCreateDrop: () => void;
+    handleRedirectToDocsHowItWorks: () => void;
 }
 
 const HowItWorksContext = React.createContext<HowItWorksContextType | undefined>(undefined);
@@ -18,12 +22,15 @@ interface HowItWorksProviderProps {
 
 export function HowItWorksProvider({ children }: HowItWorksProviderProps): React.ReactElement {
     const { data, isLoading, error } = useHowItWorksComponent();
+    const { handleRedirectToCreateDrop, handleRedirectToDocsHowItWorks } = useRedirects();
 
     const contextValue: HowItWorksContextType = React.useMemo(() => ({
         data,
         isLoading,
         error,
-    }), [data, isLoading, error]);
+        handleRedirectToCreateDrop,
+        handleRedirectToDocsHowItWorks
+    }), [data, isLoading, error, handleRedirectToCreateDrop, handleRedirectToDocsHowItWorks]);
 
     return (
         <HowItWorksContext.Provider value={contextValue}>

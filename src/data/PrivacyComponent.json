@@ -1,0 +1,41 @@
+{
+  "title": "Privacy happens",
+  "titleHighlight": "before anything leaves your device.",
+  "description": "Your data is encrypted on your device before it ever leaves. No one can read it—not even us.",
+  "encryptionStages": [
+    {
+      "id": "on-device",
+      "label": "On Your Device",
+      "description": "Content starts readable and visible",
+      "detail": "Your data remains in its original, readable form on your device until you share it"
+    },
+    {
+      "id": "encrypt",
+      "label": "Encrypted locally",
+      "description": "Content morphs into encrypted blocks",
+      "detail": "End-to-end encryption happens client-side before anything is transmitted"
+    },
+    {
+      "id": "transit",
+      "label": "Unreadable to us",
+      "description": "Encrypted data passes through servers",
+      "detail": "Even our servers can't decrypt or read your content — true zero-knowledge architecture"
+    },
+    {
+      "id": "auto-delete",
+      "label": "Automatically erased",
+      "description": "Content self-destructs after access",
+      "detail": "No permanent storage means no long-term data breach exposure"
+    },
+    {
+      "id": "recipient",
+      "label": "Decrypted privately",
+      "description": "Only recipient can unlock content",
+      "detail": "Decryption happens only on the recipient's device with the unique link key"
+    }
+  ],
+  "cta": {
+    "primary": "See how encryption works",
+    "secondary": "Read the zero-knowledge policy"
+  }
+}

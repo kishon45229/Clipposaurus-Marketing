@@ -2,28 +2,35 @@
 
 import React from "react";
 import { getComponentData } from "@/services/componentDataService";
+import type { HeroComponentType } from "@/components/home/hero/Hero.types";
+import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
+import type { WhatCanShareComponentType } from "@/components/home/what-can-share/WhatCanShare.types";
+import type { PrivacyComponentType } from "@/components/privacy/Privacy.types";
 import { TermsOfServiceComponent } from "@/types";
 import { FAQComponent } from "@/types";
-import { HeroComponent } from "@/components/hero/Hero.types";
 import { FeaturesComponent } from "@/types";
-import { HowItWorksComponent } from "@/types";
 import { SecurityComponent } from "@/types";
 import { CTAComponent } from "@/types";
 import type { FooterComponent } from "@/components/footer/footer.types";
 import type { NavbarComponent } from "@/components/navbar/navbar.types";
+import type { ComparisonComponent } from "@/components/comparison/Comparison.types";
 
-export type ComponentDataType = HeroComponent | TermsOfServiceComponent | FAQComponent | FeaturesComponent | HowItWorksComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent;
+export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponent | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent;
 
 export type ComponentTypeMap = {
-    HeroComponent: HeroComponent;
+    HeroComponent: HeroComponentType;
+    HowItWorksComponent: HowItWorksComponentType;
+    WhatCanShareComponent: WhatCanShareComponentType;
+    PrivacyComponent: PrivacyComponentType;
     TermsOfServiceComponent: TermsOfServiceComponent;
     FAQComponent: FAQComponent;
     FeaturesComponent: FeaturesComponent;
-    HowItWorksComponent: HowItWorksComponent;
     SecurityComponent: SecurityComponent;
     CTAComponent: CTAComponent;
     FooterComponent: FooterComponent;
     NavbarComponent: NavbarComponent;
+
+    ComparisonComponent: ComparisonComponent;
 };
 
 interface ComponentDataContextType {
@@ -42,6 +49,7 @@ interface ComponentDataProviderProps {
     children: React.ReactNode;
 }
 
+{/* COMPONENT DATA PROVIDER */ }
 export function ComponentDataProvider({ children }: ComponentDataProviderProps): React.ReactElement {
     const [cachedData, setCachedData] = React.useState<Partial<ComponentTypeMap>>({});
     const [loadingStates, setLoadingStates] = React.useState<Record<string, boolean>>({});
@@ -128,6 +136,7 @@ export function useComponentData(): ComponentDataContextType {
     return context;
 }
 
+{/* HERO HOOK  */ }
 export function useHeroComponent() {
     const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
 
@@ -138,9 +147,43 @@ export function useHeroComponent() {
     }, [cachedData.HeroComponent, loadingStates.HeroComponent, errorStates.HeroComponent, getComponentData]);
 
     return {
-        data: cachedData.HeroComponent as HeroComponent,
+        data: cachedData.HeroComponent as HeroComponentType,
         isLoading: loadingStates.HeroComponent || false,
         error: errorStates.HeroComponent,
+    };
+}
+
+{/* HOW IT WORKS HOOK */ }
+export function useHowItWorksComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.HowItWorksComponent && !loadingStates.HowItWorksComponent && !errorStates.HowItWorksComponent) {
+            getComponentData("HowItWorksComponent").catch(console.error);
+        }
+    }, [cachedData.HowItWorksComponent, loadingStates.HowItWorksComponent, errorStates.HowItWorksComponent, getComponentData]);
+
+    return {
+        data: cachedData.HowItWorksComponent as HowItWorksComponentType,
+        isLoading: loadingStates.HowItWorksComponent || false,
+        error: errorStates.HowItWorksComponent,
+    };
+}
+
+{/* WHAT CAN SHARE HOOK */ }
+export function useWhatCanShareComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.WhatCanShareComponent && !loadingStates.WhatCanShareComponent && !errorStates.WhatCanShareComponent) {
+            getComponentData("WhatCanShareComponent").catch(console.error);
+        }
+    }, [cachedData.WhatCanShareComponent, loadingStates.WhatCanShareComponent, errorStates.WhatCanShareComponent, getComponentData]);
+
+    return {
+        data: cachedData.WhatCanShareComponent as WhatCanShareComponentType,
+        isLoading: loadingStates.WhatCanShareComponent || false,
+        error: errorStates.WhatCanShareComponent,
     };
 }
 
@@ -192,21 +235,6 @@ export function useFeaturesComponent() {
     };
 }
 
-export function useHowItWorksComponent() {
-    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
-
-    React.useEffect(() => {
-        if (!cachedData.HowItWorksComponent && !loadingStates.HowItWorksComponent && !errorStates.HowItWorksComponent) {
-            getComponentData("HowItWorksComponent").catch(console.error);
-        }
-    }, [cachedData.HowItWorksComponent, loadingStates.HowItWorksComponent, errorStates.HowItWorksComponent, getComponentData]);
-
-    return {
-        data: cachedData.HowItWorksComponent as HowItWorksComponent,
-        isLoading: loadingStates.HowItWorksComponent || false,
-        error: errorStates.HowItWorksComponent,
-    };
-}
 
 export function useSecurityComponent() {
     const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
@@ -269,5 +297,37 @@ export function useFooterComponent() {
         data: cachedData.FooterComponent as FooterComponent,
         isLoading: loadingStates.FooterComponent || false,
         error: errorStates.FooterComponent,
+    };
+}
+
+export function usePrivacyComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.PrivacyComponent && !loadingStates.PrivacyComponent && !errorStates.PrivacyComponent) {
+            getComponentData("PrivacyComponent").catch(console.error);
+        }
+    }, [cachedData.PrivacyComponent, loadingStates.PrivacyComponent, errorStates.PrivacyComponent, getComponentData]);
+
+    return {
+        data: cachedData.PrivacyComponent as PrivacyComponentType,
+        isLoading: loadingStates.PrivacyComponent || false,
+        error: errorStates.PrivacyComponent,
+    };
+}
+
+export function useComparisonComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.ComparisonComponent && !loadingStates.ComparisonComponent && !errorStates.ComparisonComponent) {
+            getComponentData("ComparisonComponent").catch(console.error);
+        }
+    }, [cachedData.ComparisonComponent, loadingStates.ComparisonComponent, errorStates.ComparisonComponent, getComponentData]);
+
+    return {
+        data: cachedData.ComparisonComponent as ComparisonComponent,
+        isLoading: loadingStates.ComparisonComponent || false,
+        error: errorStates.ComparisonComponent,
     };
 }

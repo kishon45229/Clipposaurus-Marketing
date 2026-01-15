@@ -1,27 +1,25 @@
 import { z } from "zod";
 
 // Hero
+const HeroTrustBadges = z.object({
+  label: z.string(),
+  subtext: z.string(),
+});
+
+const HeroCTA = z.object({
+  primary: z.string(),
+  secondary: z.string(),
+  divider: z.string()
+});
+
 export const HeroComponentSchema = z.object({
   title: z.string(),
   titleHighlight: z.string(),
   description: z.string(),
-  ctaButton1: z.string(),
-  ctaButton2: z.string(),
+  trustBadges: z.array(HeroTrustBadges),
+  cta: HeroCTA,
   consentDescription: z.string(),
   consentLink: z.string(),
-});
-
-// Features
-const FeatureItemSchema = z.object({
-  icon: z.string(),
-  title: z.string(),
-  description: z.string(),
-});
-
-export const FeaturesComponentSchema = z.object({
-  headline: z.string(),
-  description: z.string(),
-  features: z.array(FeatureItemSchema),
 });
 
 // How It Works
@@ -32,11 +30,17 @@ const HowItWorksStepSchema = z.object({
   stepNumber: z.string(),
 });
 
+const HowItWorksCTASchema = z.object({
+  primary: z.string(),
+  secondary: z.string(),
+});
+
 export const HowItWorksComponentSchema = z.object({
   title: z.string(),
   titleHighlight: z.string(),
   description: z.string(),
   steps: z.array(HowItWorksStepSchema),
+  cta: HowItWorksCTASchema,
 });
 
 // FAQ
@@ -72,34 +76,27 @@ export const TermsOfServiceComponentSchema = z.object({
   sections: z.array(AccordionItemSchema),
 });
 
-// Security
-const SecurityFeatureSchema = z.object({
-  title: z.string(),
-  stat: z.string(),
-  description: z.string(),
-});
-
-const TrustIndicatorSchema = z.object({
+// CTA
+const CTAStatSchema = z.object({
   value: z.string(),
   label: z.string(),
 });
 
-export const SecurityComponentSchema = z.object({
-  badgeText: z.string(),
-  title: z.string(),
-  titleHighlight: z.string(),
-  description: z.string(),
-  features: z.array(SecurityFeatureSchema),
-  trustIndicators: z.array(TrustIndicatorSchema),
+const CTAContrastSchema = z.object({
+  left: z.string(),
+  right: z.string(),
 });
 
-// CTA
 export const CTAComponentSchema = z.object({
+  eyebrow: z.string(),
   title: z.string(),
   titleHighlight: z.string(),
   description: z.string(),
-  buttonText: z.string(),
+  primaryAction: z.string(),
+  secondaryAction: z.string(),
   trustBadges: z.array(z.string()),
+  stats: z.array(CTAStatSchema),
+  contrasts: z.array(CTAContrastSchema),
 });
 
 // Footer
@@ -183,3 +180,80 @@ export const NavbarComponentSchema = z.object({
   }),
 });
 
+// What Can Share
+const StackItemSchema = z.object({
+  type: z.string(),
+  label: z.string(),
+  preview: z.string().optional(),
+  language: z.string().optional(),
+  filename: z.string().optional(),
+  size: z.string().optional(),
+  icon: z.string(),
+});
+
+export const WhatCanShareComponentSchema = z.object({
+  headline: z.string(),
+  headlineHighlight: z.string(),
+  subtext: z.string(),
+  trustReinforcement: z.string(),
+  stackItems: z.array(StackItemSchema),
+  ctaLabel: z.string(),
+});
+
+// Privacy
+const EncryptionStageSchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  description: z.string(),
+  detail: z.string(),
+});
+
+const CTASchema = z.object({
+  primary: z.string(),
+  secondary: z.string(),
+});
+
+export const PrivacyComponentSchema = z.object({
+  title: z.string(),
+  titleHighlight: z.string(),
+  description: z.string(),
+  encryptionStages: z.array(EncryptionStageSchema),
+  cta: CTASchema,
+});
+
+// Comparison
+const ComparisonPointSchema = z.object({
+  label: z.string(),
+  description: z.string(),
+});
+
+const ComparisonHighlightSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+
+const ComparisonCalloutSchema = z.object({
+  traditional: z.string(),
+  clipposaurus: z.string(),
+});
+
+const ComparisonLaneSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  comparisonPoints: z.array(ComparisonPointSchema),
+  endState: z.string(),
+  theme: z.enum(["traditional", "clipposaurus"]),
+});
+
+export const ComparisonComponentSchema = z.object({
+  title: z.string(),
+  titleHighlight: z.string(),
+  description: z.string(),
+  tagline: z.string(),
+  lanes: z.object({
+    traditional: ComparisonLaneSchema,
+    clipposaurus: ComparisonLaneSchema,
+  }),
+  ctaText: z.string(),
+  ctaHelper: z.string(),
+});

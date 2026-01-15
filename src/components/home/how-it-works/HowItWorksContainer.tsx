@@ -2,7 +2,7 @@
 
 import { useHowItWorks } from "@/context/HowItWorksContext";
 import { HowItWorksSkeleton } from "@/components/skeleton/HowItWorksSkeleton";
-import { HowItWorksContent } from "@/components/how-it-works/HowItWorksContent";
+import { HowItWorksContent } from "@/components/home/how-it-works/HowItWorksContent";
 import { ComponentError } from "@/components/common/ComponentError";
 
 const COMPONENT_ID = "HowItWorksComponent" as const;

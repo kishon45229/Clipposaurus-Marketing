@@ -1,0 +1,70 @@
+{
+  "headline": "Share anything you'd normally copy",
+  "headlineHighlight": "and more.",
+  "subtext": "Text, code, images, and files up to 50MB — all protected, all temporary.",
+  "trustReinforcement": "Everything is end-to-end encrypted and erased automatically.",
+  "stackItems": [
+    {
+      "type": "text",
+      "label": "Text & Notes",
+      "preview": "Hey team, just finished the Q1 project roadmap. Here's what we're prioritizing: User authentication system with OAuth2, complete dashboard redesign focusing on mobile-first approach, API rate limiting implementation, and comprehensive documentation updates. Let's schedule a sync meeting to discuss the timeline and resource allocation. Also, we need to finalize the tech stack for the new microservices architecture.",
+      "icon": "FileText"
+    },
+    {
+      "type": "code",
+      "label": "Code Snippets",
+      "preview": "const encrypt = async (data: string): Promise<string> => {\n  const encoder = new TextEncoder();\n  const key = await crypto.subtle.generateKey(\n    { name: 'AES-GCM', length: 256 },\n    true,\n    ['encrypt', 'decrypt']\n  );\n  const iv = crypto.getRandomValues(new Uint8Array(12));\n  const encrypted = await crypto.subtle.encrypt(\n    { name: 'AES-GCM', iv },\n    key,\n    encoder.encode(data)\n  );\n  return btoa(String.fromCharCode(...new Uint8Array(encrypted)));\n};",
+      "language": "typescript",
+      "icon": "Code"
+    },
+    {
+      "type": "image",
+      "label": "Screenshots",
+      "preview": "dashboard-mockup-v3.png",
+      "size": "3.8 MB",
+      "icon": "Image"
+    },
+    {
+      "type": "file",
+      "label": "Documents",
+      "filename": "Q1-roadmap-final.pdf",
+      "size": "2.1 MB",
+      "icon": "Package"
+    },
+    {
+      "type": "image",
+      "label": "Design Files",
+      "preview": "wireframe-homepage-2026.fig",
+      "size": "5.2 MB",
+      "icon": "Image"
+    },
+    {
+      "type": "file",
+      "label": "Archives",
+      "filename": "design-assets-compressed.zip",
+      "size": "24 MB",
+      "icon": "Package"
+    },
+    {
+      "type": "text",
+      "label": "API Keys",
+      "preview": "STRIPE_SECRET_KEY=sk_live_51J...\nNEXT_PUBLIC_API_URL=https://api.clipposaurus.com\nDATABASE_URL=postgresql://user:pass@localhost:5432/db\nREDIS_URL=redis://localhost:6379\nJWT_SECRET=your-secret-key-here",
+      "icon": "FileText"
+    },
+    {
+      "type": "image",
+      "label": "Photos",
+      "preview": "team-photo-jan-2026.jpg",
+      "size": "4.7 MB",
+      "icon": "Image"
+    },
+    {
+      "type": "file",
+      "label": "Spreadsheets",
+      "filename": "budget-forecast-2026.xlsx",
+      "size": "892 KB",
+      "icon": "Package"
+    }
+  ],
+  "ctaLabel": "Start sharing securely now"
+}

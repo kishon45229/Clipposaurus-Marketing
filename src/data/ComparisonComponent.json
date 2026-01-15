@@ -1,0 +1,50 @@
+{
+  "title": "Two paths.",
+  "titleHighlight": "One decision.",
+  "description": "Follow the same drop through a traditional tool versus Clipposaurus and see where your data actually ends up.",
+  "tagline": "Choose the safer path",
+  "lanes": {
+    "traditional": {
+      "title": "Traditional Tools",
+      "subtitle": "Email, cloud drives, messengers",
+      "comparisonPoints": [
+        {
+          "label": "Content is visible to providers",
+          "description": "Admins and retention systems can open or scan what you send."
+        },
+        {
+          "label": "Copies linger everywhere",
+          "description": "Backups, sync, and logs create artifacts you can't easily clean up."
+        },
+        {
+          "label": "Control ends once sent",
+          "description": "No remote delete or guaranteed expiration after delivery."
+        }
+      ],
+      "endState": "Data persists indefinitely",
+      "theme": "traditional"
+    },
+    "clipposaurus": {
+      "title": "Clipposaurus",
+      "subtitle": "Zero-knowledge security",
+      "comparisonPoints": [
+        {
+          "label": "Sealed with zero-knowledge keys",
+          "description": "Only sender and recipient can decrypt — not Clipposaurus, not storage."
+        },
+        {
+          "label": "Auto-erase after delivery",
+          "description": "Expiration wipes the payload and keys to remove residue."
+        },
+        {
+          "label": "Single encrypted path",
+          "description": "No redundant copies or backup trails outside the intended recipient."
+        }
+      ],
+      "endState": "Data self-destructs on schedule",
+      "theme": "clipposaurus"
+    }
+  },
+  "ctaText": "Send a private Drop",
+  "ctaHelper": "No account required to try it."
+}

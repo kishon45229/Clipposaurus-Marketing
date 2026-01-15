@@ -7,21 +7,21 @@ export const HeroHeader = () => {
     const { title, titleHighlight, description } = data;
 
     return (
-        <div className="text-center space-y-6">
-            {/* Title with gradient */}
+        <div className="text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            {/* TITLE */}
             <div className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-[1.05] tracking-tight">
                 <span className="text-zinc-900 dark:text-zinc-50">
                     {title}{" "}
                 </span>
                 {titleHighlight && (
-                    <span className="inline-block bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-400 dark:from-emerald-400 dark:via-emerald-500 dark:to-emerald-600 bg-clip-text text-transparent [text-shadow:0_0_80px_rgba(16,185,129,0.3)]">
+                    <span className="inline-block bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-400 dark:from-emerald-400 dark:via-emerald-500 dark:to-emerald-600 bg-clip-text text-transparent [text-shadow:0_0_80px_rgba(16,185,129,0.3)] animate-in fade-in duration-1000 delay-200">
                         {titleHighlight}
                     </span>
                 )}
             </div>
 
-            {/* Description */}
-            <div className="text-[clamp(1.1rem,2vw,1.4rem)] text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-full mx-auto">
+            {/* DESCRIPTION */}
+            <div className="text-[clamp(1.1rem,2vw,1.4rem)] text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-5xl mx-auto">
                 {description}
             </div>
         </div>

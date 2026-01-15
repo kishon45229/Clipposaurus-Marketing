@@ -1,36 +1,60 @@
 {
-  "headline": "Built for Privacy & Speed",
-  "description": "Everything you need to share content securely across devices without compromising your privacy",
+  "headline": "Privacy by Design, Not by Promise",
+  "subheadline": "Verifiable Security Built Into Every Layer",
+  "description": "We don't ask you to trust us—our architecture makes it impossible for us to access your data. Here's exactly how we protect your privacy.",
+  "technicalProof": [
+    {
+      "metric": "AES-256-GCM",
+      "label": "Military-grade encryption",
+      "detail": "Client-side only"
+    },
+    {
+      "metric": "0 bytes",
+      "label": "Plaintext on our servers",
+      "detail": "Mathematically impossible"
+    },
+    {
+      "metric": "< 24 hours",
+      "label": "Maximum data lifetime",
+      "detail": "Automatic purge"
+    }
+  ],
   "features": [
     {
       "icon": "Lock",
-      "title": "End-to-End Encrypted",
-      "description": "Your content is encrypted on your device before upload. We never see your data."
+      "title": "Zero-Knowledge Encryption",
+      "description": "AES-256-GCM encryption happens in your browser before transmission. Keys never leave your device.",
+      "technicalDetail": "Client-side only • 256-bit keys"
     },
     {
       "icon": "Timer",
-      "title": "Auto-Expiring Drops",
-      "description": "Set expiration times or one-time access. Content disappears automatically."
+      "title": "Enforced Auto-Deletion",
+      "description": "Server-side cron jobs purge expired content every hour. Maximum lifetime: 24 hours, enforced.",
+      "technicalDetail": "Automated purge • No retention"
     },
     {
-      "icon": "Smartphone",
-      "title": "Cross-Device Sync",
-      "description": "Seamlessly move content between your phone, tablet, and computer."
+      "icon": "Eye",
+      "title": "No Tracking, Ever",
+      "description": "No analytics scripts. No cookies. No fingerprinting. We don't know who you are or what you share.",
+      "technicalDetail": "Zero telemetry • Open source"
     },
     {
       "icon": "Zap",
-      "title": "Lightning Fast",
-      "description": "Share instantly without waiting. No upload limits, no compression."
+      "title": "Sub-2-Second Delivery",
+      "description": "Global CDN with edge caching. Content delivered from the nearest server. Average latency: 180ms.",
+      "technicalDetail": "Edge network • <200ms latency"
     },
     {
-      "icon": "Code",
-      "title": "Developer Friendly",
-      "description": "Share code snippets with syntax highlighting and formatting preserved."
+      "icon": "Database",
+      "title": "Ephemeral Storage Only",
+      "description": "Encrypted blobs stored in memory-first databases. Nothing persists after expiration or access.",
+      "technicalDetail": "Memory-first • Single access"
     },
     {
-      "icon": "Globe",
-      "title": "No Account Required",
-      "description": "Start sharing immediately. No sign-ups, no tracking, no hassle."
+      "icon": "Shield",
+      "title": "Open Source Auditability",
+      "description": "Full source code available on GitHub. Security researchers can verify every claim we make.",
+      "technicalDetail": "Public repo • Community audited"
     }
   ]
 }

@@ -1,0 +1,1 @@
+export { PrivacyContainer as Privacy } from "@/components/privacy/PrivacyContainer";

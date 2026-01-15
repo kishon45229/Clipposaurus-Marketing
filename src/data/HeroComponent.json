@@ -1,9 +1,26 @@
 {
-  "title": "Temporary drops, permanent privacy.",
-  "titleHighlight": "Share without accounts.",
-  "description": "Clipposaurus is a privacy-first zero knowledge web app for moving content between devices. Each drop is encrypted on your device, delivered once, and auto-expires so nothing personal lives on our servers.",
-  "ctaButton1": "Get Started",
-  "ctaButton2": "Learn More",
+  "title": "Share Content.",
+  "titleHighlight": "Zero Trace.",
+  "description": "Drop text, files, or links between your devices. End-to-end encrypted. No accounts, no tracking, no permanent storage. Your content auto-expires after access or maximum time limit—guaranteed.",
+  "trustBadges": [
+    {
+      "label": "End-to-End Encrypted",
+      "subtext": "Zero-knowledge security"
+    },
+    {
+      "label": "Instant Delivery",
+      "subtext": "< 2 second transfers"
+    },
+    {
+      "label": "Auto-Delete",
+      "subtext": "1hr max lifetime"
+    }
+  ],
+  "cta": {
+    "primary": "Create Drop",
+    "secondary": "Unlock Drop",
+    "divider": "or"
+  },
   "consentDescription": "By using this application, you agree to our",
   "consentLink": "terms of service"
 }

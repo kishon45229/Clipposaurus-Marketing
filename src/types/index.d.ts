@@ -32,31 +32,25 @@ export interface TermsOfServiceComponent {
 }
 
 // Features types
+interface TechnicalProofItem {
+  metric: string;
+  label: string;
+  detail: string;
+}
+
 interface FeatureItem {
   icon: string;
   title: string;
   description: string;
+  technicalDetail?: string;
 }
 
 export interface FeaturesComponent {
   headline: string;
+  subheadline?: string;
   description: string;
+  technicalProof?: TechnicalProofItem[];
   features: FeatureItem[];
-}
-
-// How It Works types
-export interface HowItWorksStep {
-  iconName: string;
-  title: string;
-  description: string;
-  stepNumber: string;
-}
-
-export interface HowItWorksComponent {
-  title: string;
-  titleHighlight: string;
-  description: string;
-  steps: HowItWorksStep[];
 }
 
 // Security types
@@ -81,10 +75,24 @@ export interface SecurityComponent {
 }
 
 // CTA types
+export interface CTAStat {
+  value: string;
+  label: string;
+}
+
+export interface CTAContrast {
+  left: string;
+  right: string;
+}
+
 export interface CTAComponent {
+  eyebrow: string;
   title: string;
   titleHighlight: string;
   description: string;
-  buttonText: string;
+  primaryAction: string;
+  secondaryAction: string;
   trustBadges: string[];
+  stats: CTAStat[];
+  contrasts: CTAContrast[];
 }

@@ -1,7 +1,32 @@
 {
-  "title": "Ready to Share",
-  "titleHighlight": "Without Compromise?",
-  "description": "Start sharing content securely right now. No account needed, no credit card required.",
-  "buttonText": "Create Your First Drop",
-  "trustBadges": ["No Account Required", "Free Forever", "End-to-End Encrypted"]
+  "eyebrow": "Ship secure drops in seconds",
+  "title": "Share instantly",
+  "titleHighlight": "stay in control",
+  "description": "Launch a private drop, hand off the link, and keep ownership of your content. No accounts, no friction, no guesswork.",
+  "primaryAction": "Start a secure drop",
+  "secondaryAction": "See how it works",
+  "trustBadges": [
+    "No account required",
+    "Free forever",
+    "End-to-end encrypted"
+  ],
+  "stats": [
+    { "value": "<60s", "label": "to publish" },
+    { "value": "0", "label": "accounts needed" },
+    { "value": "AES-256", "label": "at rest" }
+  ],
+  "contrasts": [
+    {
+      "left": "Chasing logins, approvals, and uploads",
+      "right": "Drop a link that ships in one click"
+    },
+    {
+      "left": "Sharing to inboxes you cannot control",
+      "right": "Share to a private channel you own"
+    },
+    {
+      "left": "Hoping recipients keep things secure",
+      "right": "Encrypted by default with clear expiry"
+    }
+  ]
 }

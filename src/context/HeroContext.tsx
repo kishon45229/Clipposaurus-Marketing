@@ -2,12 +2,17 @@
 
 import React from "react";
 import { useHeroComponent } from "@/context/ComponentDataContext";
-import { HeroComponent } from "@/components/hero/Hero.types";
+import { HeroComponentType } from "@/components/home/hero/Hero.types";
+import { useRedirects } from "@/hooks/useRedirect";
 
 interface HeroContextType {
-    data: HeroComponent;
+    data: HeroComponentType;
     isLoading: boolean;
     error: Error | null;
+
+    handleRedirectToCreateDrop: () => void;
+    handleRedirectToUnlockDrop: () => void;
+    handleRedirectToTermsOfService: () => void;
 }
 
 const HeroContext = React.createContext<HeroContextType | undefined>(undefined);
@@ -18,12 +23,16 @@ interface HeroProviderProps {
 
 export function HeroProvider({ children }: HeroProviderProps): React.ReactElement {
     const { data, isLoading, error } = useHeroComponent();
+    const { handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService } = useRedirects();
 
     const contextValue: HeroContextType = React.useMemo(() => ({
         data,
         isLoading,
         error,
-    }), [data, isLoading, error]);
+        handleRedirectToCreateDrop,
+        handleRedirectToUnlockDrop,
+        handleRedirectToTermsOfService
+    }), [data, isLoading, error, handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService]);
 
     return (
         <HeroContext.Provider value={contextValue}>
