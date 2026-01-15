@@ -5,7 +5,7 @@ import { getComponentData } from "@/services/componentDataService";
 import type { HeroComponentType } from "@/components/home/hero/Hero.types";
 import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
 import type { WhatCanShareComponentType } from "@/components/home/what-can-share/WhatCanShare.types";
-import type { PrivacyComponentType } from "@/components/privacy/Privacy.types";
+import type { PrivacyComponentType } from "@/components/home/privacy/Privacy.types";
 import { TermsOfServiceComponent } from "@/types";
 import { FAQComponent } from "@/types";
 import { FeaturesComponent } from "@/types";
@@ -13,7 +13,7 @@ import { SecurityComponent } from "@/types";
 import { CTAComponent } from "@/types";
 import type { FooterComponent } from "@/components/footer/footer.types";
 import type { NavbarComponent } from "@/components/navbar/navbar.types";
-import type { ComparisonComponent } from "@/components/comparison/Comparison.types";
+import type { ComparisonComponent } from "@/components/home/comparison/Comparison.types";
 
 export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponent | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent;
 

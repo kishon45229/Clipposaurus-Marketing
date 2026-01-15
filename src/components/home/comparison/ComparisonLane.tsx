@@ -1,6 +1,6 @@
 "use client";
 
-import { ComparisonComponent } from "@/components/comparison/Comparison.types";
+import { ComparisonComponent } from "@/components/home/comparison/Comparison.types";
 import { Check, Dot, Minus } from "lucide-react";
 import React from "react";
 

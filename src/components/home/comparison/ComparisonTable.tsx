@@ -1,7 +1,7 @@
 "use client";
 
 import { useComparison } from "@/context/ComparisonContext";
-import { ComparisonLane } from "@/components/comparison/ComparisonLane";
+import { ComparisonLane } from "@/components/home/comparison/ComparisonLane";
 
 export const ComparisonTable = () => {
     const { data } = useComparison();

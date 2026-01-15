@@ -6,13 +6,12 @@ import { CTAProvider } from "@/context/CTAContext";
 import { WhatCanShare } from "@/components/home/what-can-share";
 import { WhatCanShareProvider } from "@/context/WhatCanShareContext";
 import { ComparisonProvider } from "@/context/ComparisonContext";
-import { Comparison } from "@/components/comparison";
-
+import { Comparison } from "@/components/home/comparison";
 import { Hero } from "@/components/home/hero";
 import { HowItWorks } from "@/components/home/how-it-works";
-import { CTA } from "@/components/cta";
+import { CTA } from "@/components/home/cta";
 import { PrivacyProvider } from "@/context/PrivacyContext";
-import { Privacy } from "@/components/privacy";
+import { Privacy } from "@/components/home/privacy";
 
 export default async function Home(): Promise<React.ReactElement> {
   return (

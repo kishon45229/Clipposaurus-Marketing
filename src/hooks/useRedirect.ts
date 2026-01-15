@@ -24,6 +24,7 @@ interface RedirectsReturn {
   handleRedirectToDocsEncryptionAndDecryption: () => void;
   handleRedirectToDocsZeroKnowledgePolicy: () => void;
   handleRedirectToDocsHowItWorks: () => void;
+  handleRedirectToDocsQuickstart: () => void;
 }
 
 export function useRedirects(): RedirectsReturn {
@@ -106,6 +107,10 @@ export function useRedirects(): RedirectsReturn {
     window.location.href = DOCS_URL + "/how-it-works";
   }, []);
 
+  const handleRedirectToDocsQuickstart = React.useCallback(() => {
+    window.location.href = DOCS_URL + "/quick-start";
+  }, []);
+
   return {
     handleRedictToCurrentPageHome,
     handleRedirectToDocs,
@@ -122,5 +127,6 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToDocsEncryptionAndDecryption,
     handleRedirectToDocsZeroKnowledgePolicy,
     handleRedirectToDocsHowItWorks,
+    handleRedirectToDocsQuickstart
   };
 }

@@ -1,10 +1,10 @@
 "use client";
 
-import { CTAHeader } from "@/components/cta/CTAHeader";
-import { CTAButtons } from "@/components/cta/CTAButtons";
-import { CTATrustBadges } from "@/components/cta/CTATrustBadges";
-import { BackgroundDecoration } from "@/components/cta/BackgroundDecoration";
-import { CTAStats } from "@/components/cta/CTAStats";
+import { CTAHeader } from "@/components/home/cta/CTAHeader";
+import { CTAButtons } from "@/components/home/cta/CTAButtons";
+import { CTATrustBadges } from "@/components/home/cta/CTATrustBadges";
+import { BackgroundDecoration } from "@/components/home/cta/BackgroundDecoration";
+import { CTAStats } from "@/components/home/cta/CTAStats";
 
 export const CTAContent = () => {
     return (

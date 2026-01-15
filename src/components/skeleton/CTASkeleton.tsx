@@ -1,7 +1,7 @@
 "use client";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { BackgroundDecoration } from "@/components/cta/BackgroundDecoration";
+import { BackgroundDecoration } from "@/components/home/cta/BackgroundDecoration";
 
 export const CTASkeleton = () => {
     return (

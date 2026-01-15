@@ -1,7 +1,7 @@
-import { PrivacyHeader } from "@/components/privacy/PrivacyHeader";
-import { PrivacyInStages } from "@/components/privacy/PrivacyInStages";
+import { PrivacyHeader } from "@/components/home/privacy/PrivacyHeader";
+import { PrivacyInStages } from "@/components/home/privacy/PrivacyInStages";
 import { BackgroundDecoration } from "@/components/common/BackgroundDecoration";
-import { PrivacyCTA } from "@/components/privacy/PrivacyCTA";
+import { PrivacyCTA } from "@/components/home/privacy/PrivacyCTA";
 
 export const PrivacyContent = () => {
     return (

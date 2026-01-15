@@ -3,11 +3,15 @@
 import React from "react";
 import { useCTAComponent } from "@/context/ComponentDataContext";
 import { CTAComponent } from "@/types";
+import { useRedirects } from "@/hooks/useRedirect";
 
 interface CTAContextType {
     data: CTAComponent;
     isLoading: boolean;
     error: Error | null;
+
+    handleRedirectToCreateDrop: () => void;
+    handleRedirectToDocsQuickstart: () => void;
 }
 
 const CTAContext = React.createContext<CTAContextType | undefined>(undefined);
@@ -18,12 +22,15 @@ interface CTAProviderProps {
 
 export function CTAProvider({ children }: CTAProviderProps): React.ReactElement {
     const { data, isLoading, error } = useCTAComponent();
+    const { handleRedirectToCreateDrop, handleRedirectToDocsQuickstart } = useRedirects();
 
     const contextValue: CTAContextType = React.useMemo(() => ({
         data,
         isLoading,
         error,
-    }), [data, isLoading, error]);
+        handleRedirectToCreateDrop,
+        handleRedirectToDocsQuickstart
+    }), [data, isLoading, error, handleRedirectToCreateDrop, handleRedirectToDocsQuickstart]);
 
     return (
         <CTAContext.Provider value={contextValue}>

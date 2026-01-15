@@ -2,7 +2,7 @@
 
 import { usePrivacy } from "@/context/PrivacyContext";
 import { PrivacySkeleton } from "@/components/skeleton/PrivacySkeleton";
-import { PrivacyContent } from "@/components/privacy/PrivacyContent";
+import { PrivacyContent } from "@/components/home/privacy/PrivacyContent";
 import { ComponentError } from "@/components/common/ComponentError";
 
 const COMPONENT_ID = "PrivacyComponent" as const;

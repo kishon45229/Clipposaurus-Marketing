@@ -2,7 +2,7 @@
 
 import { useCTA } from "@/context/CTAContext";
 import { CTASkeleton } from "@/components/skeleton/CTASkeleton";
-import { CTAContent } from "@/components/cta/CTAContent";
+import { CTAContent } from "@/components/home/cta/CTAContent";
 import { ComponentError } from "@/components/common/ComponentError";
 
 const COMPONENT_ID = "CTAComponent" as const;

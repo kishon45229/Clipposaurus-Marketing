@@ -2,7 +2,7 @@
 
 import { useComparison } from "@/context/ComparisonContext";
 import { ComponentError } from "@/components/common/ComponentError";
-import { ComparisonContent } from "@/components/comparison/ComparisonContent";
+import { ComparisonContent } from "@/components/home/comparison/ComparisonContent";
 
 const COMPONENT_ID = "ComparisonComponent" as const;
 

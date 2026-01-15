@@ -1,9 +1,9 @@
 "use client";
 
-import { ComparisonHeader } from "@/components/comparison/ComparisonHeader";
+import { ComparisonHeader } from "@/components/home/comparison/ComparisonHeader";
 import { BackgroundDecoration } from "@/components/common/BackgroundDecoration";
-import { ComparisonTable } from "@/components/comparison/ComparisonTable";
-import { ComparisonCTA } from "@/components/comparison/ComparisonCTA";
+import { ComparisonTable } from "@/components/home/comparison/ComparisonTable";
+import { ComparisonCTA } from "@/components/home/comparison/ComparisonCTA";
 
 export const ComparisonContent = () => {
     return (
