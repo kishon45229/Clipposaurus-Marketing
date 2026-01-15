@@ -19,7 +19,7 @@ export const FAQItem = React.memo<FAQItemProps>(({ question, answer }): React.Re
     return (
         <Accordion type="single" collapsible className="w-full">
             <AccordionItem value={itemId} className="border-t rounded-lg px-4">
-                <AccordionTrigger className="text-left hover:no-underline">
+                <AccordionTrigger className="text-left hover:no-underline cursor-target">
                     <span className="font-medium text-foreground">{question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">

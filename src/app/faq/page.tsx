@@ -1,5 +1,4 @@
 import React from "react";
-import { ComponentDataProvider } from "@/context/ComponentDataContext";
 import { FAQContainer } from "@/components/faq/FAQContainer";
 import LoadingFallback from "@/app/loading";
 import { FAQProvider } from "@/context/FAQContext";
@@ -32,15 +31,13 @@ export const metadata: Metadata = {
  */
 export default function FAQPage(): React.ReactElement {
     return (
-        <ComponentDataProvider>
-            <React.Suspense fallback={<LoadingFallback />}>
-                <FAQProvider>
-                    <FAQSchema />
-                    <section className="xl:min-h-screen max-w-480mx-auto py-2 sm:py-4">
-                        <FAQContainer />
-                    </section>
-                </FAQProvider>
-            </React.Suspense>
-        </ComponentDataProvider>
+        <React.Suspense fallback={<LoadingFallback />}>
+            <FAQProvider>
+                <FAQSchema />
+                <section className=":min-h-screen max-w-7xl mx-auto py-2 sm:py-4">
+                    <FAQContainer />
+                </section>
+            </FAQProvider>
+        </React.Suspense>
     );
 }
