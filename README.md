@@ -23,6 +23,11 @@ Clipposaurus is your instant, zero-signup, open-source digital clipboard with tr
 
 Visit the live documentation at [https://docs.clipposaurus.com](https://docs.clipposaurus.com).
 
+## Related Repositories
+
+- To visit the app repository, visit [https://github.com/kishon45229/Clipposaurus.git](https://github.com/kishon45229/Clipposaurus.git)
+- To visit the docs repository, visit [https://github.com/kishon45229/Clipposaurus-Docs.git](https://github.com/kishon45229/Clipposaurus-Docs.git)
+
 ## License
 
 This project is licensed under the MIT License.
