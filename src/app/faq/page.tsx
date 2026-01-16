@@ -34,7 +34,7 @@ export default function FAQPage(): React.ReactElement {
         <React.Suspense fallback={<LoadingFallback />}>
             <FAQProvider>
                 <FAQSchema />
-                <section className=":min-h-screen max-w-7xl mx-auto py-2 sm:py-4">
+                <section className="min-h-screen max-w-7xl mx-auto py-2 sm:py-4">
                     <FAQContainer />
                 </section>
             </FAQProvider>
