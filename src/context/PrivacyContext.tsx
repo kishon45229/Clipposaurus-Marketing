@@ -3,10 +3,10 @@
 import React from "react";
 import { usePrivacyComponent } from "@/context/ComponentDataContext";
 import { useRedirects } from "@/hooks/useRedirect";
-import { PrivacyComponent } from "@/components/home/privacy/Privacy.types";
+import { PrivacyComponentType } from "@/components/home/privacy/Privacy.types";
 
 interface PrivacyContextType {
-    data: PrivacyComponent;
+    data: PrivacyComponentType;
     isLoading: boolean;
     error: Error | null;
     handleRedirectToDocsEncryptionAndDecryption: () => void;

@@ -2,7 +2,7 @@
   "title": "Privacy happens",
   "titleHighlight": "before anything leaves your device.",
   "description": "Your data is encrypted on your device before it ever leaves. No one can read it—not even us.",
-  "encryptionStages": [
+  "stages": [
     {
       "id": "on-device",
       "label": "On Your Device",

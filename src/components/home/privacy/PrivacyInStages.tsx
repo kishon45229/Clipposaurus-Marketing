@@ -5,11 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 export const PrivacyInStages = () => {
   const { data } = usePrivacy();
-  const stages = data.encryptionStages;
+  const { stages } = data;
 
   return (
     <section className="relative max-w-7xl mx-auto w-full">
-      {/* Column-based layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         {stages.map((stage, index) => (
           <div
@@ -17,12 +16,12 @@ export const PrivacyInStages = () => {
             className="relative group"
           >
             <div className="flex flex-col h-full p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300">
-              {/* Step number */}
+              {/* STEP NUMBER */}
               <div className="shrink-0 w-10 h-10 rounded-full border-2 border-emerald-500 bg-emerald-500/10 flex items-center justify-center mb-4">
                 <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{index + 1}</span>
               </div>
 
-              {/* Content */}
+              {/* CONTENT */}
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
                   {stage.label}
@@ -36,7 +35,7 @@ export const PrivacyInStages = () => {
               </div>
             </div>
 
-            {/* Arrow connector for large screens */}
+            {/* ARROW CONNECTOR FOR LARGE SCREENS */}
             {index < stages.length - 1 && (
               <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 z-10">
                 <ArrowRight className="w-5 h-5 text-zinc-400 dark:text-zinc-600" />

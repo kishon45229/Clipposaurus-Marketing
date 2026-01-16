@@ -104,7 +104,7 @@ export const StackItemCard = ({ item, index, isHovered, isActive, onHover }: {
                                 backgroundColor: theme === 'dark' ? 'rgb(39 39 42 / 0.5)' : 'rgb(244 244 245)',
                             }}
                         >
-                            {item.preview}
+                            {item.preview || ''}
                         </SyntaxHighlighter>
                     )}
 

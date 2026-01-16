@@ -9,7 +9,7 @@ const HeroTrustBadges = z.object({
 const HeroCTA = z.object({
   primary: z.string(),
   secondary: z.string(),
-  divider: z.string()
+  divider: z.string(),
 });
 
 export const HeroComponentSchema = z.object({
@@ -201,7 +201,7 @@ export const WhatCanShareComponentSchema = z.object({
 });
 
 // Privacy
-const EncryptionStageSchema = z.object({
+const StageSchema = z.object({
   id: z.string(),
   label: z.string(),
   description: z.string(),
@@ -217,7 +217,7 @@ export const PrivacyComponentSchema = z.object({
   title: z.string(),
   titleHighlight: z.string(),
   description: z.string(),
-  encryptionStages: z.array(EncryptionStageSchema),
+  stages: z.array(StageSchema),
   cta: CTASchema,
 });
 
