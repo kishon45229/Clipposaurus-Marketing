@@ -1,55 +1,85 @@
 "use client";
 
 import { useHero } from "@/context/HeroContext";
-import { Plus, KeyRound } from "lucide-react";
+import { Plus, KeyRound, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ShineEffect } from "@/components/common/ShineEffect";
+import { StandardDialog } from "@/components/dialogs";
+import { useRateLimit } from "@/hooks/useRateLimit";
 
 export const HeroCTAs = () => {
     const { data, handleRedirectToCreateDrop, handleRedirectToUnlockDrop } = useHero();
+    const {
+        showRateLimitDialog,
+        setShowRateLimitDialog,
+        rateLimitMessage,
+        isChecking,
+        handleCreateDropClick,
+        handleUnlockDropClick,
+    } = useRateLimit();
 
     const { cta } = data;
     const { primary, secondary, divider } = cta;
 
     return (
-        <div className="flex flex-col items-center gap-4 lg:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-            {/* PRIMARY CTA */}
-            <Button
-                onClick={handleRedirectToCreateDrop}
-                disabled={false}
-                size="lg"
-                className="group relative h-[clamp(3rem,4vw,5rem)] px-[clamp(2rem,3vw,3rem)] text-[clamp(1rem,1.5vw,1.5rem)] font-bold text-white bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-500 rounded-2xl shadow-[0_8px_30px_rgb(16,185,129,0.3)] hover:shadow-[0_12px_40px_rgb(16,185,129,0.4)] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed border border-emerald-400/20 cursor-target"
-            >
-                <span className="flex items-center gap-3">
-                    <Plus className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-                    <span>{primary}</span>
-                </span>
+        <>
+            <div className="flex flex-col items-center gap-4 lg:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+                {/* PRIMARY CTA */}
+                <Button
+                    onClick={() => handleCreateDropClick(handleRedirectToCreateDrop)}
+                    disabled={isChecking}
+                    size="lg"
+                    className="group relative h-[clamp(3rem,4vw,5rem)] px-[clamp(2rem,3vw,3rem)] text-[clamp(1rem,1.5vw,1.5rem)] font-bold text-white bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-500 rounded-2xl shadow-[0_8px_30px_rgb(16,185,129,0.3)] hover:shadow-[0_12px_40px_rgb(16,185,129,0.4)] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed border border-emerald-400/20 cursor-target"
+                >
+                    <span className="flex items-center gap-3">
+                        <Plus className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+                        <span>{primary}</span>
+                    </span>
 
-                {/* SHINE EFFECT */}
-                <ShineEffect />
-            </Button>
+                    {/* SHINE EFFECT */}
+                    <ShineEffect />
+                </Button>
 
-            {/* DIVIDER */}
-            <div className="flex items-center gap-4 w-full max-w-xs">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
-                <span className="text-sm font-medium text-zinc-400 dark:text-zinc-600 uppercase tracking-wider">
-                    {divider}
-                </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+                {/* DIVIDER */}
+                <div className="flex items-center gap-4 w-full max-w-xs">
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+                    <span className="text-sm font-medium text-zinc-400 dark:text-zinc-600 uppercase tracking-wider">
+                        {divider}
+                    </span>
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+                </div>
+
+                {/* SECONDARY CTA */}
+                <Button
+                    onClick={() => handleUnlockDropClick(handleRedirectToUnlockDrop)}
+                    variant="outline"
+                    size="lg"
+                    disabled={isChecking}
+                    className="group h-[clamp(3rem,4vw,5rem)] px-[clamp(2rem,3vw,3rem)] text-[clamp(1rem,1.5vw,1.5rem)] font-semibold text-zinc-700 dark:text-zinc-300 border-2 border-zinc-300 dark:border-zinc-700 bg-white/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 rounded-2xl backdrop-blur-sm hover:shadow-lg transition-all duration-300 cursor-target"
+                >
+                    <span className="flex items-center gap-3">
+                        <KeyRound className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                        <span>{secondary}</span>
+                    </span>
+                </Button>
             </div>
 
-            {/* SECONDARY CTA */}
-            <Button
-                onClick={handleRedirectToUnlockDrop}
-                variant="outline"
-                size="lg"
-                className="group h-[clamp(3rem,4vw,5rem)] px-[clamp(2rem,3vw,3rem)] text-[clamp(1rem,1.5vw,1.5rem)] font-semibold text-zinc-700 dark:text-zinc-300 border-2 border-zinc-300 dark:border-zinc-700 bg-white/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 rounded-2xl backdrop-blur-sm hover:shadow-lg transition-all duration-300 cursor-target"
-            >
-                <span className="flex items-center gap-3">
-                    <KeyRound className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                    <span>{secondary}</span>
-                </span>
-            </Button>
-        </div>
+            {/* RATE LIMIT DIALOG */}
+            <StandardDialog
+                open={showRateLimitDialog}
+                onOpenChange={setShowRateLimitDialog}
+                icon={<AlertTriangle className="w-12 h-12 text-amber-500" />}
+                title="Rate Limit Exceeded"
+                description={rateLimitMessage}
+                buttons={[
+                    {
+                        text: "Close",
+                        onClick: () => setShowRateLimitDialog(false),
+                        variant: "default",
+                    },
+                ]}
+                showCloseButton={true}
+            />
+        </>
     );
 };
