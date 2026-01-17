@@ -8,19 +8,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "FAQ - Frequently Asked Questions",
     description:
-        "Find answers to common questions about Clipposaurus secure file sharing, encryption, privacy, and how to use our zero-knowledge platform.",
+        "Find answers to common questions about encryption, privacy, and how to use our Clipposaurus zero-knowledge platform.",
     keywords: [
         "clipposaurus faq",
-        "file sharing questions",
         "encryption faq",
         "how to use clipposaurus",
-        "secure file sharing help",
         "zero knowledge encryption questions",
     ],
     openGraph: {
         title: "FAQ - Frequently Asked Questions | Clipposaurus",
         description:
-            "Find answers to common questions about Clipposaurus secure file sharing",
+            "Find answers to common questions about encryption, privacy, and how to use our Clipposaurus zero-knowledge platform.",
         type: "website",
     },
 };
