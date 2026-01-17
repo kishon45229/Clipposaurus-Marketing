@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   DOCS_URL,
@@ -7,8 +9,13 @@ import {
   CONTACT_EMAIL,
   APP_URL,
 } from "@/lib/urls";
+import { sendRateLimitRequest } from "@/services/rateLimitService";
 
 interface RedirectsReturn {
+  showRateLimitDialog: boolean;
+  isChecking: boolean;
+  handleRateLimitDialogBoxOpenChange: (open: boolean) => void;
+
   handleRedictToCurrentPageHome: () => void;
   handleRedirectToDocs: () => void;
   handleRedirectToGitHub: () => void;
@@ -28,6 +35,19 @@ interface RedirectsReturn {
 }
 
 export function useRedirects(): RedirectsReturn {
+  const [showRateLimitDialog, setShowRateLimitDialog] = React.useState(false);
+  const [isChecking, setIsChecking] = React.useState(false);
+
+  const handleRateLimitDialogBoxOpenChange = React.useCallback(
+    (open: boolean) => {
+      if (!open && !showRateLimitDialog) {
+        setIsChecking(false);
+        setShowRateLimitDialog(false);
+      }
+    },
+    [showRateLimitDialog],
+  );
+
   // Home
   const handleRedictToCurrentPageHome = React.useCallback(() => {
     window.location.href = "/";
@@ -78,18 +98,32 @@ export function useRedirects(): RedirectsReturn {
     window.open(
       GITHUB_REPO_URL + "/discussions",
       "_blank",
-      "noopener noreferrer"
+      "noopener noreferrer",
     );
   }, []);
 
   // CREATE DROP
-  const handleRedirectToCreateDrop = React.useCallback(() => {
-    window.location.href = APP_URL + "/create-drop";
+  const handleRedirectToCreateDrop = React.useCallback(async () => {
+    setIsChecking(true);
+    const rateLimitResult = await sendRateLimitRequest();
+    if (rateLimitResult.allowed) {
+      window.location.href = APP_URL + "/create-drop";
+      return;
+    }
+    setShowRateLimitDialog(true);
+    setIsChecking(false);
   }, []);
 
   // UNLOCK DROP
-  const handleRedirectToUnlockDrop = React.useCallback(() => {
-    window.location.href = APP_URL + "/unlock-drop";
+  const handleRedirectToUnlockDrop = React.useCallback(async () => {
+    setIsChecking(true);
+    const rateLimitResult = await sendRateLimitRequest();
+    if (rateLimitResult.allowed) {
+      window.location.href = APP_URL + "/unlock-drop";
+      return;
+    }
+    setShowRateLimitDialog(true);
+    setIsChecking(false);
   }, []);
 
   // DOCS - ENCRYPTION AND DECRYPTION
@@ -112,6 +146,10 @@ export function useRedirects(): RedirectsReturn {
   }, []);
 
   return {
+    showRateLimitDialog,
+    isChecking,
+    handleRateLimitDialogBoxOpenChange,
+
     handleRedictToCurrentPageHome,
     handleRedirectToDocs,
     handleRedirectToGitHub,
@@ -127,6 +165,6 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToDocsEncryptionAndDecryption,
     handleRedirectToDocsZeroKnowledgePolicy,
     handleRedirectToDocsHowItWorks,
-    handleRedirectToDocsQuickstart
+    handleRedirectToDocsQuickstart,
   };
 }
