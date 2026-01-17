@@ -6,7 +6,7 @@
     {
       "iconName": "Upload",
       "title": "Create a Drop",
-      "description": "Upload text, code, or files. Everything is encrypted instantly on your device.",
+      "description": "Type/paste text or code snippets. Everything is encrypted instantly on your device.",
       "stepNumber": "01"
     },
     {
