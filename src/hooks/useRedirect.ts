@@ -13,7 +13,8 @@ import { sendRateLimitRequest } from "@/services/rateLimitService";
 
 interface RedirectsReturn {
   showRateLimitDialog: boolean;
-  isChecking: boolean;
+  isCreateDropChecking: boolean;
+  isOpenDropChecking: boolean;
   handleRateLimitDialogBoxOpenChange: (open: boolean) => void;
 
   handleRedictToCurrentPageHome: () => void;
@@ -36,12 +37,13 @@ interface RedirectsReturn {
 
 export function useRedirects(): RedirectsReturn {
   const [showRateLimitDialog, setShowRateLimitDialog] = React.useState(false);
-  const [isChecking, setIsChecking] = React.useState(false);
+  const [isCreateDropChecking, setIsCreateDropChecking] = React.useState(false);
+  const [isOpenDropChecking, setIsOpenDropChecking] = React.useState(false);
 
   const handleRateLimitDialogBoxOpenChange = React.useCallback(
     (open: boolean) => {
       if (!open && !showRateLimitDialog) {
-        setIsChecking(false);
+        setIsCreateDropChecking(false);
         setShowRateLimitDialog(false);
       }
     },
@@ -104,26 +106,26 @@ export function useRedirects(): RedirectsReturn {
 
   // CREATE DROP
   const handleRedirectToCreateDrop = React.useCallback(async () => {
-    setIsChecking(true);
+    setIsCreateDropChecking(true);
     const rateLimitResult = await sendRateLimitRequest();
     if (rateLimitResult.allowed) {
       window.location.href = APP_URL + "/create-drop";
       return;
     }
     setShowRateLimitDialog(true);
-    setIsChecking(false);
+    setIsCreateDropChecking(false);
   }, []);
 
   // UNLOCK DROP
   const handleRedirectToUnlockDrop = React.useCallback(async () => {
-    setIsChecking(true);
+    setIsOpenDropChecking(true);
     const rateLimitResult = await sendRateLimitRequest();
     if (rateLimitResult.allowed) {
       window.location.href = APP_URL + "/unlock-drop";
       return;
     }
     setShowRateLimitDialog(true);
-    setIsChecking(false);
+    setIsOpenDropChecking(false);
   }, []);
 
   // DOCS - ENCRYPTION AND DECRYPTION
@@ -147,7 +149,8 @@ export function useRedirects(): RedirectsReturn {
 
   return {
     showRateLimitDialog,
-    isChecking,
+    isCreateDropChecking,
+    isOpenDropChecking,
     handleRateLimitDialogBoxOpenChange,
 
     handleRedictToCurrentPageHome,

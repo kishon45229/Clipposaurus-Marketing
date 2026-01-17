@@ -10,7 +10,8 @@ interface HeroContextType {
     isLoading: boolean;
     error: Error | null;
 
-    isChecking: boolean;
+    isCreateDropChecking: boolean;
+    isOpenDropChecking: boolean;
 
     handleRedirectToCreateDrop: () => void;
     handleRedirectToUnlockDrop: () => void;
@@ -25,19 +26,20 @@ interface HeroProviderProps {
 
 export function HeroProvider({ children }: HeroProviderProps): React.ReactElement {
     const { data, isLoading, error } = useHeroComponent();
-    const { isChecking, handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService } = useRedirects();
+    const { isCreateDropChecking, isOpenDropChecking, handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService } = useRedirects();
 
     const contextValue: HeroContextType = React.useMemo(() => ({
         data,
         isLoading,
         error,
 
-        isChecking,
+        isCreateDropChecking,
+        isOpenDropChecking,
 
         handleRedirectToCreateDrop,
         handleRedirectToUnlockDrop,
         handleRedirectToTermsOfService
-    }), [data, isLoading, error, isChecking, handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService]);
+    }), [data, isLoading, error, isCreateDropChecking, isOpenDropChecking, handleRedirectToCreateDrop, handleRedirectToUnlockDrop, handleRedirectToTermsOfService]);
 
     return (
         <HeroContext.Provider value={contextValue}>
