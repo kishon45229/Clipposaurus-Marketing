@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTermsOfServiceComponent } from "@/context/ComponentDataContext";
+import { useTermsOfServiceComponent } from "@/contexts/ComponentDataContext";
 import { TermsOfServiceComponent } from "@/types";
 
 interface TermsOfServiceContextType {

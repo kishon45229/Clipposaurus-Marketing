@@ -1,7 +1,7 @@
 "use client";
 
 import { Shield, Zap, Clock } from "lucide-react";
-import { useHero } from "@/context/HeroContext";
+import { useHero } from "@/contexts/HeroContext";
 
 const iconMap = {
     0: Shield,

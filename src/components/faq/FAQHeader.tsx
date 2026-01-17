@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useFAQ } from "@/context/FAQContext";
+import { useFAQ } from "@/contexts/FAQContext";
 
 export const FAQHeader = (): React.ReactNode => {
     const { data } = useFAQ();

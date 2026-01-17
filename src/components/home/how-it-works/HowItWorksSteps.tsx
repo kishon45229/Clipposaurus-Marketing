@@ -1,7 +1,7 @@
 "use client";
 
 import { Upload, Key, Download, CheckCircle } from "lucide-react";
-import { useHowItWorks } from "@/context/HowItWorksContext";
+import { useHowItWorks } from "@/contexts/HowItWorksContext";
 import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
 
 const getIcon = (iconName: string) => {

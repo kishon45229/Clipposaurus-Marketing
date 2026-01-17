@@ -1,6 +1,6 @@
 "use client";
 
-import { useWhatCanShare } from "@/context/WhatCanShareContext";
+import { useWhatCanShare } from "@/contexts/WhatCanShareContext";
 import { Button } from "@/components/ui/button";
 
 export const WhatCanShareCTA = () => {

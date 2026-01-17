@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { usePrivacyComponent } from "@/context/ComponentDataContext";
+import { usePrivacyComponent } from "@/contexts/ComponentDataContext";
 import { useRedirects } from "@/hooks/useRedirect";
 import { PrivacyComponentType } from "@/components/home/privacy/Privacy.types";
 

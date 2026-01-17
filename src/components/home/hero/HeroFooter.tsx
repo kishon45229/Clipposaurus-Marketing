@@ -1,6 +1,6 @@
 "use client";
 
-import { useHero } from "@/context/HeroContext";
+import { useHero } from "@/contexts/HeroContext";
 
 export const HeroFooter = () => {
     const { data, handleRedirectToTermsOfService } = useHero();

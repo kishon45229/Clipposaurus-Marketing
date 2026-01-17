@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTermsOfService } from "@/context/TermsOfServiceContext";
+import { useTermsOfService } from "@/contexts/TermsOfServiceContext";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { StickyTOC } from "@/components/common/StickyTOC";
 import { TermsOfServiceHeader } from "@/components/terms-of-service/TermsOfServiceHeader";

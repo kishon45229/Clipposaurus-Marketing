@@ -1,6 +1,6 @@
 "use client";
 
-import { usePrivacy } from "@/context/PrivacyContext";
+import { usePrivacy } from "@/contexts/PrivacyContext";
 
 export const PrivacyHeader = () => {
     const { data } = usePrivacy();

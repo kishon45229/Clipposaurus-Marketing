@@ -1,7 +1,7 @@
 import React from 'react';
 import LoadingFallback from "@/app/loading";
-import { ComponentDataProvider } from "@/context/ComponentDataContext";
-import { TermsOfServiceProvider } from "@/context/TermsOfServiceContext";
+import { ComponentDataProvider } from "@/contexts/ComponentDataContext";
+import { TermsOfServiceProvider } from "@/contexts/TermsOfServiceContext";
 import { TermsAndConditions } from "@/components/terms-of-service";
 
 /**

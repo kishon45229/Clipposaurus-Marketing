@@ -1,6 +1,6 @@
 "use client";
 
-import { useHowItWorks } from "@/context/HowItWorksContext";
+import { useHowItWorks } from "@/contexts/HowItWorksContext";
 import { HowItWorksSkeleton } from "@/components/skeleton/HowItWorksSkeleton";
 import { HowItWorksContent } from "@/components/home/how-it-works/HowItWorksContent";
 import { ComponentError } from "@/components/common/ComponentError";

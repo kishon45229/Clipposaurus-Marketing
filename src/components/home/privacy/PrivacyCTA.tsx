@@ -1,6 +1,6 @@
 "use client";
 
-import { usePrivacy } from "@/context/PrivacyContext";
+import { usePrivacy } from "@/contexts/PrivacyContext";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ShineEffect } from "@/components/common/ShineEffect";

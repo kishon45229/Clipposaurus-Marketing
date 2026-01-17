@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavbar } from "@/context/NavbarContext"
+import { useNavbar } from "@/contexts/NavbarContext"
 import { ComponentError } from "@/components/common/ComponentError";
 import { NavbarContent } from "@/components/navbar/NavbarContent";
 import { NavbarSkeleton } from "@/components/skeleton/NavbarSkeleton";

@@ -1,6 +1,6 @@
 "use client";
 
-import { usePrivacy } from "@/context/PrivacyContext";
+import { usePrivacy } from "@/contexts/PrivacyContext";
 import { PrivacySkeleton } from "@/components/skeleton/PrivacySkeleton";
 import { PrivacyContent } from "@/components/home/privacy/PrivacyContent";
 import { ComponentError } from "@/components/common/ComponentError";

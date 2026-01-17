@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useWhatCanShareComponent } from "@/context/ComponentDataContext";
+import { useWhatCanShareComponent } from "@/contexts/ComponentDataContext";
 import { WhatCanShareComponentType } from "@/components/home/what-can-share/WhatCanShare.types";
 import { useStackRotation } from "@/hooks/useStackRotation";
 import { useRedirects } from "@/hooks/useRedirect";

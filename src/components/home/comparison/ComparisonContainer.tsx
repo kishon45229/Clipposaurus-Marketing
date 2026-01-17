@@ -1,6 +1,6 @@
 "use client";
 
-import { useComparison } from "@/context/ComparisonContext";
+import { useComparison } from "@/contexts/ComparisonContext";
 import { ComponentError } from "@/components/common/ComponentError";
 import { ComparisonContent } from "@/components/home/comparison/ComparisonContent";
 import { ComparisonSkeleton } from "@/components/skeleton/ComparisonSkeleton";

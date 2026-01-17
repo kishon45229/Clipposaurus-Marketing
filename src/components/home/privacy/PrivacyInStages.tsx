@@ -1,6 +1,6 @@
 "use client";
 
-import { usePrivacy } from "@/context/PrivacyContext";
+import { usePrivacy } from "@/contexts/PrivacyContext";
 import { ArrowRight } from "lucide-react";
 
 export const PrivacyInStages = () => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { FileText, Code, Lock, LucideIcon } from "lucide-react";
-import { useWhatCanShare } from "@/context/WhatCanShareContext";
+import { useWhatCanShare } from "@/contexts/WhatCanShareContext";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useTheme } from 'next-themes';

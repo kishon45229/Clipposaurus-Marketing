@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavbar } from "@/context/NavbarContext";
+import { useNavbar } from "@/contexts/NavbarContext";
 import { ScrollText, FileText, HeartHandshake } from "lucide-react";
 import {
     NavigationMenu,

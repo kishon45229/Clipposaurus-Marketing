@@ -1,6 +1,6 @@
 "use client";
 
-import { useWhatCanShare } from "@/context/WhatCanShareContext";
+import { useWhatCanShare } from "@/contexts/WhatCanShareContext";
 
 export const WhatCanShareHeader = () => {
     const { data } = useWhatCanShare();

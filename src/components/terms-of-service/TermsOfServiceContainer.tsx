@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTermsOfService } from "@/context/TermsOfServiceContext";
+import { useTermsOfService } from "@/contexts/TermsOfServiceContext";
 import { ComponentError } from "@/components/common/ComponentError";
 import { TermsOfServiceContent } from "@/components/terms-of-service/TermsOfServiceContent";
 import { TermsOfServiceSkeleton } from "@/components/skeleton/TermsOfServiceSkeleton";

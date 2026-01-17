@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavbar } from "@/context/NavbarContext";
+import { useNavbar } from "@/contexts/NavbarContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { BookOpen, Star } from "lucide-react";

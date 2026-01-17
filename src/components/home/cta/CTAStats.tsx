@@ -1,6 +1,6 @@
 "use client";
 
-import { useCTA } from "@/context/CTAContext";
+import { useCTA } from "@/contexts/CTAContext";
 
 export const CTAStats = () => {
     const { data } = useCTA();

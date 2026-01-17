@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useComparisonComponent } from "@/context/ComponentDataContext";
+import { useComparisonComponent } from "@/contexts/ComponentDataContext";
 import { ComparisonComponent } from "@/components/home/comparison/Comparison.types";
 import { useRedirects } from "@/hooks/useRedirect";
 

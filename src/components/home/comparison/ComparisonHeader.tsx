@@ -1,6 +1,6 @@
 "use client";
 
-import { useComparison } from "@/context/ComparisonContext";
+import { useComparison } from "@/contexts/ComparisonContext";
 
 export const ComparisonHeader = () => {
     const { data } = useComparison();

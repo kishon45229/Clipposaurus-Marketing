@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FAQItem } from "@/components/faq/FAQItem";
-import { useFAQ } from "@/context/FAQContext";
+import { useFAQ } from "@/contexts/FAQContext";
 import { FAQCategoryHeader } from "@/components/faq/FAQCategoryHeader";
 
 export const FAQCategory = (): React.ReactNode => {

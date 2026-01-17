@@ -1,6 +1,6 @@
 "use client";
 
-import { useHero } from "@/context/HeroContext";
+import { useHero } from "@/contexts/HeroContext";
 import { Plus, KeyRound, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ShineEffect } from "@/components/common/ShineEffect";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useHero } from "@/context/HeroContext";
+import { useHero } from "@/contexts/HeroContext";
 import { HeroSkeleton } from "@/components/skeleton/HeroSkeleton";
 import { HeroContent } from "@/components/home/hero/HeroContent";
 import { ComponentError } from "@/components/common/ComponentError";

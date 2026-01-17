@@ -1,6 +1,6 @@
 "use client";
 
-import { useHowItWorks } from "@/context/HowItWorksContext";
+import { useHowItWorks } from "@/contexts/HowItWorksContext";
 
 export const HowItWorksHeader = () => {
     const { data } = useHowItWorks();

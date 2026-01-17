@@ -1,5 +1,5 @@
 import React from "react";
-import { useFAQ } from "@/context/FAQContext";
+import { useFAQ } from "@/contexts/FAQContext";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { FAQHeader } from "@/components/faq/FAQHeader";
 import { FAQCategory } from "@/components/faq/FAQCategory";

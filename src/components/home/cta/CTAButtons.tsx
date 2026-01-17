@@ -2,7 +2,7 @@
 
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useCTA } from "@/context/CTAContext";
+import { useCTA } from "@/contexts/CTAContext";
 
 export const CTAButtons = () => {
     const { data, handleRedirectToCreateDrop, handleRedirectToDocsQuickstart } = useCTA();

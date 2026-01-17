@@ -1,5 +1,5 @@
 import React from "react";
-import { useTermsOfService } from "@/context/TermsOfServiceContext";
+import { useTermsOfService } from "@/contexts/TermsOfServiceContext";
 
 export const TermsOfServiceHeader = (): React.ReactNode => {
     const { data } = useTermsOfService();

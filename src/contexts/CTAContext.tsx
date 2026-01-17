@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useCTAComponent } from "@/context/ComponentDataContext";
+import { useCTAComponent } from "@/contexts/ComponentDataContext";
 import { CTAComponent } from "@/types";
 import { useRedirects } from "@/hooks/useRedirect";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useHeroComponent } from "@/context/ComponentDataContext";
+import { useHeroComponent } from "@/contexts/ComponentDataContext";
 import { HeroComponentType } from "@/components/home/hero/Hero.types";
 import { useRedirects } from "@/hooks/useRedirect";
 

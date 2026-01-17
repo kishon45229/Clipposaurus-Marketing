@@ -1,6 +1,6 @@
 "use client";
 
-import { useComparison } from "@/context/ComparisonContext";
+import { useComparison } from "@/contexts/ComparisonContext";
 import { Button } from "@/components/ui/button";
 
 export const ComparisonCTA = () => {

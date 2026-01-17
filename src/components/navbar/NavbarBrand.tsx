@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useNavbar } from "@/context/NavbarContext";
+import { useNavbar } from "@/contexts/NavbarContext";
 
 export const NavbarBrand = () => {
     const { data } = useNavbar();

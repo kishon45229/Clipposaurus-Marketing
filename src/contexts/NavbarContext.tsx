@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useNavbarComponent } from "@/context/ComponentDataContext";
+import { useNavbarComponent } from "@/contexts/ComponentDataContext";
 import { useRedirects } from "@/hooks/useRedirect";
 import type { NavbarComponent } from "@/components/navbar/navbar.types";
 

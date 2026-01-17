@@ -1,6 +1,6 @@
 "use client";
 
-import { useWhatCanShare } from "@/context/WhatCanShareContext";
+import { useWhatCanShare } from "@/contexts/WhatCanShareContext";
 import { StackItemCard, StackItem } from "./StackItemCard";
 import { STACK_CARD_HEIGHT, STACK_OFFSET } from "@/hooks/useStackRotation";
 

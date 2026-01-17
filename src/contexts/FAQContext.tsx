@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useFAQComponent } from "@/context/ComponentDataContext";
+import { useFAQComponent } from "@/contexts/ComponentDataContext";
 import { FAQComponent } from "@/types";
 
 interface FAQContextType {

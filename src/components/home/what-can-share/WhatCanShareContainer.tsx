@@ -1,6 +1,6 @@
 "use client";
 
-import { useWhatCanShare } from "@/context/WhatCanShareContext";
+import { useWhatCanShare } from "@/contexts/WhatCanShareContext";
 import { WhatCanShareSkeleton } from "@/components/skeleton/WhatCanShareSkeleton";
 import { WhatCanShareContent } from "@/components/home/what-can-share/WhatCanShareContent";
 import { ComponentError } from "@/components/common/ComponentError";

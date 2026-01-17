@@ -1,16 +1,16 @@
 import React from "react";
 import LoadingFallback from "@/app/loading";
-import { HeroProvider } from "@/context/HeroContext";
-import { HowItWorksProvider } from "@/context/HowItWorksContext";
-import { CTAProvider } from "@/context/CTAContext";
+import { HeroProvider } from "@/contexts/HeroContext";
+import { HowItWorksProvider } from "@/contexts/HowItWorksContext";
+import { CTAProvider } from "@/contexts/CTAContext";
 import { WhatCanShare } from "@/components/home/what-can-share";
-import { WhatCanShareProvider } from "@/context/WhatCanShareContext";
-import { ComparisonProvider } from "@/context/ComparisonContext";
+import { WhatCanShareProvider } from "@/contexts/WhatCanShareContext";
+import { ComparisonProvider } from "@/contexts/ComparisonContext";
 import { Comparison } from "@/components/home/comparison";
 import { Hero } from "@/components/home/hero";
 import { HowItWorks } from "@/components/home/how-it-works";
 import { CTA } from "@/components/home/cta";
-import { PrivacyProvider } from "@/context/PrivacyContext";
+import { PrivacyProvider } from "@/contexts/PrivacyContext";
 import { Privacy } from "@/components/home/privacy";
 
 export default async function Home(): Promise<React.ReactElement> {

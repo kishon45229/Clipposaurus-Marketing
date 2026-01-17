@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useFooterComponent } from "@/context/ComponentDataContext";
+import { useFooterComponent } from "@/contexts/ComponentDataContext";
 import { useRedirects } from "@/hooks/useRedirect";
 import type { FooterComponent } from "@/components/footer/footer.types";
 

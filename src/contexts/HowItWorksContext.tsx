@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useHowItWorksComponent } from "@/context/ComponentDataContext";
+import { useHowItWorksComponent } from "@/contexts/ComponentDataContext";
 import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
 import { useRedirects } from "@/hooks/useRedirect";
 

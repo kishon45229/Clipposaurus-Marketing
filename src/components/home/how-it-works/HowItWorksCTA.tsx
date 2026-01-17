@@ -1,6 +1,6 @@
 "use client";
 
-import { useHowItWorks } from "@/context/HowItWorksContext";
+import { useHowItWorks } from "@/contexts/HowItWorksContext";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { ShineEffect } from "@/components/common/ShineEffect";

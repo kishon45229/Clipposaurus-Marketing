@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavbar } from "@/context/NavbarContext";
+import { useNavbar } from "@/contexts/NavbarContext";
 import { Bug, HelpCircle, Mail } from "lucide-react";
 import {
     NavigationMenu,

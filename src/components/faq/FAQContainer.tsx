@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useFAQ } from "@/context/FAQContext";
+import { useFAQ } from "@/contexts/FAQContext";
 import { ComponentError } from "@/components/common/ComponentError";
 import { FAQContent } from "@/components/faq/FAQContent";
 import { FAQSkeleton } from "@/components/skeleton/FAQSkeleton";
