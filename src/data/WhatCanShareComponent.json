@@ -1,7 +1,7 @@
 {
   "headline": "Share anything you'd normally copy",
   "headlineHighlight": "and more.",
-  "subtext": "Text, code, images, and files up to 50MB — all protected, all temporary.",
+  "subtext": "Text and code snippets — all protected, all temporary.",
   "trustReinforcement": "Everything is end-to-end encrypted and erased automatically.",
   "stackItems": [
     {
@@ -18,52 +18,10 @@
       "icon": "Code"
     },
     {
-      "type": "image",
-      "label": "Screenshots",
-      "preview": "dashboard-mockup-v3.png",
-      "size": "3.8 MB",
-      "icon": "Image"
-    },
-    {
-      "type": "file",
-      "label": "Documents",
-      "filename": "Q1-roadmap-final.pdf",
-      "size": "2.1 MB",
-      "icon": "Package"
-    },
-    {
-      "type": "image",
-      "label": "Design Files",
-      "preview": "wireframe-homepage-2026.fig",
-      "size": "5.2 MB",
-      "icon": "Image"
-    },
-    {
-      "type": "file",
-      "label": "Archives",
-      "filename": "design-assets-compressed.zip",
-      "size": "24 MB",
-      "icon": "Package"
-    },
-    {
       "type": "text",
       "label": "API Keys",
       "preview": "STRIPE_SECRET_KEY=sk_live_51J...\nNEXT_PUBLIC_API_URL=https://api.clipposaurus.com\nDATABASE_URL=postgresql://user:pass@localhost:5432/db\nREDIS_URL=redis://localhost:6379\nJWT_SECRET=your-secret-key-here",
       "icon": "FileText"
-    },
-    {
-      "type": "image",
-      "label": "Photos",
-      "preview": "team-photo-jan-2026.jpg",
-      "size": "4.7 MB",
-      "icon": "Image"
-    },
-    {
-      "type": "file",
-      "label": "Spreadsheets",
-      "filename": "budget-forecast-2026.xlsx",
-      "size": "892 KB",
-      "icon": "Package"
     }
   ],
   "ctaLabel": "Start sharing securely now"
