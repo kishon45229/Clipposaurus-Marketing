@@ -9,35 +9,31 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "Clipposaurus - Secure Zero-Knowledge File & Code Sharing Platform",
+      "Clipposaurus - Secure Zero-Knowledge Text & Code Sharing Platform",
     template: "%s | Clipposaurus",
   },
   description:
-    "Share files, code snippets, and text securely with zero-knowledge encryption. No signup required, auto-expiring drops, and complete privacy. Built for developers and privacy-conscious users.",
+    "Share text and code snippets securely with zero-knowledge encryption. No signup required, auto-expiring drops, and complete privacy. Built for developers and privacy-conscious users.",
   keywords: [
     // Primary Keywords
-    "secure file sharing",
-    "encrypted file sharing",
     "zero knowledge encryption",
-    "privacy file sharing",
-    "anonymous file sharing",
     // Feature-specific
     "code snippet sharing",
     "pastebin alternative",
-    "temporary file storage",
-    "ephemeral file sharing",
-    "self-destructing files",
+    "temporary text storage",
+    "ephemeral text sharing",
+    "self-destructing texts",
     // Use cases
     "developer tools",
     "secure clipboard",
-    "cross-device file transfer",
-    "no signup file sharing",
+    "cross-device code transfer",
+    "no signup text sharing",
     "end-to-end encrypted sharing",
     // Technical
     "client-side encryption",
     "browser encryption",
     "drop key sharing",
-    "auto-expiring files",
+    "auto-expiring code",
     // Brand
     "clipposaurus",
     "clip sharing",
@@ -48,7 +44,7 @@ export const siteMetadata: Metadata = {
   publisher: "G. Kishon",
   applicationName: "Clipposaurus",
   category: "Productivity",
-  classification: "File Sharing & Collaboration Tool",
+  classification: "Content Sharing & Collaboration Tool",
   formatDetection: {
     email: false,
     address: false,
@@ -65,15 +61,15 @@ export const siteMetadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Clipposaurus",
-    title: "Clipposaurus - Secure Zero-Knowledge File & Code Sharing Platform",
+    title: "Clipposaurus - Secure Zero-Knowledge Text & Code Sharing Platform",
     description:
-      "Share files, code snippets, and text securely with zero-knowledge encryption. No signup required, auto-expiring drops, and complete privacy.",
+      "Share text and code snippets securely with zero-knowledge encryption. No signup required, auto-expiring drops, and complete privacy.",
     images: [
       {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Clipposaurus - Secure File & Code Sharing",
+        alt: "Clipposaurus - Secure Text & Code Sharing",
         type: "image/png",
       },
       {
@@ -87,9 +83,9 @@ export const siteMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clipposaurus - Secure Zero-Knowledge File Sharing",
+    title: "Clipposaurus - Secure Zero-Knowledge Content Sharing",
     description:
-      "Share files, code, and text securely with zero-knowledge encryption. No signup, auto-expiring, completely private.",
+      "Share text and code snippets securely with zero-knowledge encryption. No signup, auto-expiring, completely private.",
     images: [`${BASE_URL}/twitter-image.png`],
     creator: "@clipposaurus",
     site: "@clipposaurus",
