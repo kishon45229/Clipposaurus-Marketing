@@ -188,8 +188,6 @@ const StackItemSchema = z.object({
   label: z.string(),
   preview: z.string().optional(),
   language: z.string().optional(),
-  filename: z.string().optional(),
-  size: z.string().optional(),
   icon: z.string(),
 });
 
