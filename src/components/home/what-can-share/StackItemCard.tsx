@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText, Code, Image as ImageIcon, Package, Lock, LucideIcon } from "lucide-react";
+import { FileText, Code, Lock, LucideIcon } from "lucide-react";
 import { useWhatCanShare } from "@/context/WhatCanShareContext";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -12,17 +12,13 @@ export const STACK_OFFSET = 14;
 const iconMap: Record<string, LucideIcon> = {
     filetext: FileText,
     code: Code,
-    image: ImageIcon,
-    package: Package,
 };
 
 export interface StackItem {
     type: string;
     label: string;
-    preview?: string;
     language?: string;
-    filename?: string;
-    size?: string;
+    preview?: string;
     icon: string;
 }
 
@@ -106,35 +102,6 @@ export const StackItemCard = ({ item, index, isHovered, isActive, onHover }: {
                         >
                             {item.preview || ''}
                         </SyntaxHighlighter>
-                    )}
-
-                    {item.type === "image" && (
-                        <div className="space-y-3">
-                            <div className="w-full h-40 bg-linear-to-br from-emerald-100 via-blue-100 to-violet-100 dark:from-emerald-900/30 dark:via-blue-900/30 dark:to-violet-900/30 rounded-lg flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.8),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.3),transparent_50%)]" />
-                                <ImageIcon className="w-16 h-16 text-zinc-400 dark:text-zinc-600 relative z-10" strokeWidth={1.5} />
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <span className="text-sm text-zinc-600 dark:text-zinc-400 truncate">{item.preview}</span>
-                                <span className="text-xs text-zinc-500 dark:text-zinc-500 ml-2 shrink-0">{item.size}</span>
-                            </div>
-                        </div>
-                    )}
-
-                    {item.type === "file" && (
-                        <div className="flex items-center justify-between p-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg">
-                            <div className="flex items-center gap-3 min-w-0">
-                                <div className="w-10 h-10 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg flex items-center justify-center shrink-0">
-                                    <Package className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                                </div>
-                                <div className="min-w-0">
-                                    <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 truncate">
-                                        {item.filename}
-                                    </p>
-                                    <p className="text-xs text-zinc-500 dark:text-zinc-500">{item.size}</p>
-                                </div>
-                            </div>
-                        </div>
                     )}
                 </div>
             </div>
