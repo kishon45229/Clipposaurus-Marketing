@@ -8,7 +8,7 @@ export const ComparisonHeader = () => {
 
     return (
         <div className="space-y-4">
-            <div className="space-y-3">
+            <div className="space-y-3 text-center">
                 <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight max-w-4xl">
                     <span className="text-zinc-900 dark:text-zinc-50">
                         {title}{" "}

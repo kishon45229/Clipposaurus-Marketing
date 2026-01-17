@@ -7,7 +7,7 @@ import { HamburgerMenu } from "@/components/navbar/HamburgerMenu";
 
 export const NavbarContent = () => {
     return (
-        <div className="max-w-7xl h-full mx-auto px-2 sm:px-4">
+        <div className="max-w-7xl h-full mx-auto px-2 sm:px-4 lg:px-0">
             <div className="flex items-center justify-between h-full lg:hidden gap-2">
                 <HamburgerMenu />
                 <NavbarBrand />

@@ -9,16 +9,16 @@ export const CTAStats = () => {
     if (!stats?.length) return null;
 
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-[clamp(0.75rem,1.5vw,1rem)]">
             {stats.map((stat, index) => (
                 <div
                     key={`${stat.label}-${index}`}
-                    className="rounded-2xl border border-emerald-100 dark:border-emerald-900/50 bg-white/70 dark:bg-zinc-900/60 px-4 py-3 shadow-[0_10px_30px_-24px_rgba(16,185,129,1)]"
+                    className="rounded-2xl border border-emerald-100 dark:border-emerald-900/50 bg-white/70 dark:bg-zinc-900/60 px-[clamp(1rem,2vw,1.25rem)] py-[clamp(0.75rem,1.5vw,1rem)] shadow-[0_10px_30px_-24px_rgba(16,185,129,1)]"
                 >
-                    <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">
+                    <div className="text-[clamp(1.25rem,3vw,1.5rem)] font-black text-emerald-600 dark:text-emerald-400">
                         {stat.value}
                     </div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-400">
+                    <div className="text-[clamp(0.75rem,1.5vw,0.875rem)] font-semibold uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-400">
                         {stat.label}
                     </div>
                 </div>

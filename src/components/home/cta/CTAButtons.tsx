@@ -13,7 +13,7 @@ export const CTAButtons = () => {
             <Button
                 onClick={handleRedirectToCreateDrop}
                 size="lg"
-                className="group h-12 sm:h-14 w-1/2 px-6 sm:px-7 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl border border-emerald-500/60 shadow-[0_12px_40px_-18px_rgba(16,185,129,1)] transition-all duration-200 cursor-target"
+                className="group h-[clamp(3rem,4vw,3.5rem)] w-full sm:w-1/2 px-[clamp(1.5rem,3vw,1.75rem)] text-[clamp(1rem,2vw,1.125rem)] font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl border border-emerald-500/60 shadow-[0_12px_40px_-18px_rgba(16,185,129,1)] transition-all duration-200 cursor-target"
             >
                 <span className="flex items-center gap-2">
                     <Sparkles className="h-5 w-5" />
@@ -25,7 +25,7 @@ export const CTAButtons = () => {
                 onClick={handleRedirectToDocsQuickstart}
                 size="lg"
                 variant="outline"
-                className="h-12 sm:h-14 w-1/2  px-6 sm:px-7 text-base font-semibold border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 hover:border-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 bg-white/60 dark:bg-zinc-900/60 cursor-target"
+                className="h-[clamp(3rem,4vw,3.5rem)] w-full sm:w-1/2  px-[clamp(1.5rem,3vw,1.75rem)] text-[clamp(1rem,2vw,1.125rem)] font-semibold border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 hover:border-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 bg-white/60 dark:bg-zinc-900/60 cursor-target"
             >
                 {secondaryAction}
             </Button>

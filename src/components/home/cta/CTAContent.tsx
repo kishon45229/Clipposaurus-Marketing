@@ -13,7 +13,7 @@ export const CTAContent = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(16,185,129,0.12),_transparent_45%)] dark:bg-[radial-gradient(circle_at_bottom,_rgba(16,185,129,0.18),_transparent_45%)]" />
 
             <div className="relative max-w-7xl mx-auto">
-                <div className="relative grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-start p-[clamp(1.75rem,4vw,2.5rem)]">
+                <div className="relative grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-start">
                     <div className="space-y-12 lg:pr-8">
                         <CTAHeader />
                         <CTAStats />

@@ -21,7 +21,7 @@ export const CTATrustBadges = () => {
                 return (
                     <div
                         key={index}
-                        className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/70 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-700 text-sm text-zinc-700 dark:text-zinc-200 shadow-sm"
+                        className="flex items-center gap-2 px-3 py-2 rounded-ful text-sm text-zinc-700 dark:text-zinc-200 shadow-sm"
                     >
                         {IconComponent && <IconComponent className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />}
                         <span className="font-medium whitespace-nowrap">{badge}</span>
