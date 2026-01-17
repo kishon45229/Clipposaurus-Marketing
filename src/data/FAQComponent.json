@@ -10,7 +10,7 @@
       "questions": [
         {
           "question": "What is Clipposaurus?",
-          "answer": "Clipposaurus is a secure, temporary content sharing platform that allows you to create drops containing text, code snippets, and files across devices. It uses end-to-end encryption and automatically deletes your content based on your chosen retention setting (up to 1 hour), ensuring your privacy and security."
+          "answer": "Clipposaurus is a secure, temporary content sharing platform that allows you to create drops containing text and code snippets across devices. It uses end-to-end encryption and automatically deletes your content based on your chosen retention setting (up to 1 hour), ensuring your privacy and security."
         },
         {
           "question": "Do I need to create an account?",
@@ -22,7 +22,7 @@
         },
         {
           "question": "What types of content can I share?",
-          "answer": "You can create drops containing three types of content: plain text (notes, messages, etc.), code snippets with syntax highlighting for 10+ programming languages, and files up to 50MB in size (At the moment, file uploads are limited to 50 MB due to storage constraints. We plan to increase this limit in the future. If you’d like to support us, donations will help us expand our storage capacity)."
+          "answer": "You can create drops containing two types of content: plain text (notes, messages, etc.) and code snippets with syntax highlighting for 10+ programming languages."
         },
         {
           "question": "How long is my drop stored?",
@@ -45,7 +45,7 @@
         },
         {
           "question": "What happens when my drop expires?",
-          "answer": "Your content is automatically and permanently deleted from our servers. This includes all text, code, files, and associated metadata. There is no backup or recovery option."
+          "answer": "Your content is automatically and permanently deleted from our servers. This includes all text, code and associated metadata. There is no backup or recovery option."
         },
         {
           "question": "Do you track or log user activity?",
@@ -57,7 +57,7 @@
         },
         {
           "question": "Where is my data stored?",
-          "answer": "Your data is stored on secure cloud infrastructure. Text and code are stored in encrypted Upstash Redis databases, while files are stored on cloud storage providers such as Cloudflare R2 and Backblaze B2 with encryption."
+          "answer": "Text and code are stored in encrypted Upstash Redis databases."
         }
       ]
     },
@@ -92,7 +92,7 @@
         },
         {
           "question": "Is there a limit to how much I can share?",
-          "answer": "Text and code are limited to reasonable sizes for performance. Files are limited to 50MB per upload. There's no limit on the number of drop you can create. However, excessive usage may be subject to rate limiting to ensure fair access for all users."
+          "answer": "No limitations for text and code sharing. However, excessive usage may be subject to rate limiting to ensure fair access for all users."
         }
       ]
     },
@@ -108,10 +108,6 @@
         {
           "question": "Does it work on mobile devices?",
           "answer": "Yes! Clipposaurus is fully responsive and works great on smartphones and tablets. The interface adapts to your screen size for optimal usability."
-        },
-        {
-          "question": "What file types can I upload?",
-          "answer": "You can upload any file type. Common supported formats include documents (PDF, DOCX, TXT), images (JPG, PNG, GIF), videos (MP4, MOV), archives (ZIP, RAR), and more."
         },
         {
           "question": "What programming languages are supported for code sharing?",
@@ -141,12 +137,8 @@
           "answer": "Common reasons include: 1) Content has expired (depending on your retention setting: after access, 30 minutes, or 1 hour), 2) Drop key was entered incorrectly (check for typos), 3) Network connectivity issues. Make sure you're entering the exact drop key provided when you created the drop."
         },
         {
-          "question": "My file upload is failing. What should I do?",
-          "answer": "Check that: 1) Your file is under 50MB, 2) You have a stable internet connection, 3) Your browser is up to date. If issues persist, try a different browser or clear your browser cache."
-        },
-        {
           "question": "The page is loading slowly. How can I fix this?",
-          "answer": "Slow loading can be caused by: 1) Poor internet connection, 2) Large file uploads, 3) Browser extensions interfering. Try disabling browser extensions, checking your connection speed, or using a different network."
+          "answer": "Slow loading can be caused by: 1) Poor internet connection, 2) Browser extensions interfering. Try disabling browser extensions, checking your connection speed, or using a different network."
         },
         {
           "question": "Can I extend the expiration time beyond 1 hour?",
@@ -192,7 +184,7 @@
       "questions": [
         {
           "question": "How is Clipposaurus different from Pastebin?",
-          "answer": "Unlike Pastebin, Clipposaurus encrypts your content, doesn't require an account, automatically deletes content after 1 hour, and supports file uploads. We prioritize privacy and temporary sharing over permanent storage."
+          "answer": "Unlike Pastebin, Clipposaurus encrypts your content, doesn't require an account, automatically deletes content in maximum 1 hour. We prioritize privacy and temporary sharing over permanent storage."
         },
         {
           "question": "How is it different from email or messaging apps?",
@@ -200,11 +192,11 @@
         },
         {
           "question": "Why not use Google Drive or Dropbox?",
-          "answer": "Those services require accounts and store files permanently. Clipposaurus is instant, anonymous, and temporary. It's ideal when you just need to quickly share something without the overhead of account management or permanent storage."
+          "answer": "Those services require accounts and store your permanently. Clipposaurus is instant, anonymous, and temporary. It's ideal when you just need to quickly share something without the overhead of account management or permanent storage."
         },
         {
           "question": "What about GitHub Gists?",
-          "answer": "GitHub Gists are great for developers but require a GitHub account and are primarily for code. Clipposaurus works without accounts, supports any content type including files, and auto-deletes for privacy."
+          "answer": "GitHub Gists are great for developers but require a GitHub account and are primarily for code. Clipposaurus works without accounts, supports any type of text content, and auto-deletes for privacy."
         }
       ]
     },
