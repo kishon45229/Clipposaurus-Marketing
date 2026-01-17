@@ -12,7 +12,7 @@ export function getSiteJsonLd() {
         "@id": `${url}/#website`,
         name: "Clipposaurus",
         description:
-          "Secure zero-knowledge file and code sharing platform with end-to-end encryption, no account required, and auto-expiring drops",
+          "Secure zero-knowledge text and code sharing platform with end-to-end encryption, no account required, and auto-expiring drops",
         url,
         potentialAction: {
           "@type": "SearchAction",
@@ -55,7 +55,7 @@ export function getSiteJsonLd() {
         name: "Clipposaurus",
         url,
         applicationCategory: "SecurityApplication",
-        applicationSubCategory: "File Sharing",
+        applicationSubCategory: "Content Sharing",
         operatingSystem: "Any",
         browserRequirements: "Requires JavaScript. Requires HTML5.",
         offers: {
@@ -74,7 +74,6 @@ export function getSiteJsonLd() {
           "Zero-knowledge encryption",
           "No account required",
           "Auto-expiring drops",
-          "File sharing up to 50MB",
           "Code snippet sharing",
           "Cross-device sync",
           "End-to-end encryption",
@@ -84,7 +83,7 @@ export function getSiteJsonLd() {
         "@type": "SoftwareApplication",
         name: "Clipposaurus",
         applicationCategory: "WebApplication",
-        applicationSubCategory: "File Sharing & Collaboration",
+        applicationSubCategory: "Content Sharing & Collaboration",
         operatingSystem: "Web Browser",
         offers: {
           "@type": "Offer",
@@ -92,7 +91,7 @@ export function getSiteJsonLd() {
           priceCurrency: "USD",
         },
         description:
-          "Secure, zero-knowledge file and code sharing platform with end-to-end encryption",
+          "Secure, zero-knowledge text and code sharing platform with end-to-end encryption",
       },
     ],
   };
