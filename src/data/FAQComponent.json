@@ -72,11 +72,11 @@
         },
         {
           "question": "What is a drop key?",
-          "answer": "A drop key is a unique three-word code (like 'apple-beer-ocean') that serves as the key to access your content. It's easy to remember, type, and share compared to long random strings."
+          "answer": "A drop key is a unique three-word code (like 'apple-beer-ocean') that unlocks your content. It's short enough to say out loud in person or text quickly—way easier than copying long random URLs. Think of it like a verbal password you can share at a meeting or coffee shop."
         },
         {
           "question": "Can I access my content multiple times?",
-          "answer": "Yes! You can access your content as many times as you want within the retention period you selected (if you choose delete immediately after access you can access your drop only one time, after that it will be automatically deleted). The drop key remains valid until the content expires."
+          "answer": "It depends on what you choose! Pick 'delete after first access' for ultra-secure one-time sharing (perfect for sensitive info). Or choose 30 minutes or 1 hour if you're sharing with a group and want everyone to grab it before it vanishes. You're always in control."
         },
         {
           "question": "What happens if I lose my drop key?",
@@ -84,7 +84,7 @@
         },
         {
           "question": "Can I share my drop key with multiple people?",
-          "answer": "Yes! You can share your drop key with as many people as you want only if you choose the retention setting as keep for 30 minutes or 1 hour. Everyone who has the key can access the content within the selected retention timeframe."
+          "answer": "Absolutely! If you set the timer to 30 minutes or 1 hour, you can share the three-word key with your whole team. Everyone who has it can access the content before it expires—great for quick team handoffs, meeting notes, or sharing code snippets with colleagues in the same room."
         },
         {
           "question": "Can I edit content after saving it?",

@@ -1,19 +1,19 @@
 {
   "title": "Share Content.",
   "titleHighlight": "Zero Trace.",
-  "description": "Drop text or code snippets between your devices. End-to-end encrypted. No accounts, no tracking, no permanent storage. Your content auto-expires after access or maximum time limit—guaranteed.",
+  "description": "Share text or code snippets instantly—whether it's between your own devices, handing off in person, or with a whole team. End-to-end encrypted. No accounts, no tracking. Choose one-time access or set a timer up to 1 hour. Your content vanishes automatically—guaranteed.",
   "trustBadges": [
     {
       "label": "End-to-End Encrypted",
       "subtext": "Zero-knowledge security"
     },
     {
-      "label": "Instant Delivery",
-      "subtext": "< 2 second transfers"
+      "label": "Share Once or Forever",
+      "subtext": "One-time or 1hr access"
     },
     {
-      "label": "Auto-Delete",
-      "subtext": "1hr max lifetime"
+      "label": "Works Everywhere",
+      "subtext": "Perfect for in-person sharing"
     }
   ],
   "cta": {

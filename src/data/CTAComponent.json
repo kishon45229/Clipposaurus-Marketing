@@ -17,16 +17,16 @@
   ],
   "contrasts": [
     {
-      "left": "Chasing logins, approvals, and uploads",
-      "right": "Drop a link that ships in one click"
+      "left": "Fumbling with long URLs or QR codes",
+      "right": "Just say three words out loud"
     },
     {
-      "left": "Sharing to inboxes you cannot control",
-      "right": "Share to a private channel you own"
+      "left": "Worrying who else might see it",
+      "right": "One-time view or controlled group access"
     },
     {
-      "left": "Hoping recipients keep things secure",
-      "right": "Encrypted by default with clear expiry"
+      "left": "Content lingering in cloud forever",
+      "right": "Auto-deletes after first read or 1 hour"
     }
   ]
 }

@@ -12,19 +12,19 @@
     {
       "iconName": "Key",
       "title": "Get Your Key",
-      "description": "Receive a unique drop key. Share it securely with your other device or recipient.",
+      "description": "Receive a memorable three-word key. Text it, say it out loud, or type it on your other device—however you share is up to you.",
       "stepNumber": "02"
     },
     {
       "iconName": "Download",
       "title": "Unlock & Access",
-      "description": "Enter the drop key on any device to decrypt and access your content.",
+      "description": "Anyone with the key can open it on any device. Perfect for quick in-person handoffs or sharing with a group.",
       "stepNumber": "03"
     },
     {
       "iconName": "CheckCircle",
       "title": "Auto-Delete",
-      "description": "Content expires after access or time limit. Zero trace left on our servers.",
+      "description": "Choose one-time access for ultra-secure sharing, or keep it available for up to an hour. Either way, it vanishes completely.",
       "stepNumber": "04"
     }
   ],

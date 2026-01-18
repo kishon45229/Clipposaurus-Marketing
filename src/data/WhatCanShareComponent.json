@@ -1,8 +1,8 @@
 {
   "headline": "Share anything you'd normally copy",
   "headlineHighlight": "and more.",
-  "subtext": "Text and code snippets — all protected, all temporary.",
-  "trustReinforcement": "Everything is end-to-end encrypted and erased automatically.",
+  "subtext": "Text and code snippets — all protected, all temporary. Share once or with your entire team.",
+  "trustReinforcement": "Everything is end-to-end encrypted. Set it to vanish after one view or after an hour—your call.",
   "stackItems": [
     {
       "type": "text",

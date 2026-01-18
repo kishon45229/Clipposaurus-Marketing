@@ -30,15 +30,15 @@
       "comparisonPoints": [
         {
           "label": "Sealed with zero-knowledge keys",
-          "description": "Only sender and recipient can decrypt — not Clipposaurus, not storage."
+          "description": "Only people with your key can decrypt it—great for one-on-one or group sharing. Not even Clipposaurus can peek."
         },
         {
           "label": "Auto-erase after delivery",
-          "description": "Expiration wipes the payload and keys to remove residue."
+          "description": "Set it to vanish after the first person opens it, or keep it live for a team to grab within an hour."
         },
         {
-          "label": "Single encrypted path",
-          "description": "No redundant copies or backup trails outside the intended recipient."
+          "label": "Perfect for in-person exchanges",
+          "description": "Say your three-word key out loud at a coffee shop or meeting. No need to fumble with long URLs or QR codes."
         }
       ],
       "endState": "Data self-destructs on schedule",
