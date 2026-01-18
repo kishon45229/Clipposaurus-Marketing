@@ -22,16 +22,16 @@
       "detail": "Even our servers can't decrypt or read your content — true zero-knowledge architecture"
     },
     {
-      "id": "auto-delete",
-      "label": "Automatically erased",
-      "description": "Content self-destructs after access",
-      "detail": "No permanent storage means no long-term data breach exposure"
-    },
-    {
       "id": "recipient",
       "label": "Decrypted privately",
       "description": "Only recipient can unlock content",
       "detail": "Decryption happens only on the recipient's device with the unique link key"
+    },
+    {
+      "id": "auto-delete",
+      "label": "Automatically erased",
+      "description": "Content self-destructs after access",
+      "detail": "No permanent storage means no long-term data breach exposure"
     }
   ],
   "cta": {
