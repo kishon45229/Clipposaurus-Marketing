@@ -14,6 +14,8 @@ import { HeadTags } from "@/components/common/HeadTags";
 import { OfflineAlert } from "@/components/common/OfflineAlert";
 import { BetaNotice } from "@/components/common/BetaNotice";
 import { siteMetadata } from "@/lib/siteMetadata";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Trigger env validation
 import env from "@/lib/env";
@@ -59,6 +61,8 @@ export default function RootLayout({
                 </div>
                 <div>
                   {children}
+                  <Analytics />
+                  <SpeedInsights />
                 </div>
                 <div>
                   <FooterProvider>
