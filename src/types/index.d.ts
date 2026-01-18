@@ -20,12 +20,19 @@ export interface FAQComponent {
 
 // Terms of Service types
 interface AccordionItem {
-  id: number;
+  id: string;
   title: string;
   description: string;
 }
 
 export interface TermsOfServiceComponent {
+  headline: string;
+  lastUpdated: string;
+  sections: AccordionItem[];
+}
+
+// Privacy Policy types
+export interface PrivacyPolicyComponent {
   headline: string;
   lastUpdated: string;
   sections: AccordionItem[];
@@ -96,3 +103,10 @@ export interface CTAComponent {
   stats: CTAStat[];
   contrasts: CTAContrast[];
 }
+
+import { PageHeaderSchema, PageSectionsSchema, PageFooterSchema } from "@/lib/schema";
+import { z } from "zod";
+
+export type PageHeaderType = z.infer<typeof PageHeaderSchema>;
+export type PageSectionsType = z.infer<typeof PageSectionsSchema>;
+export type PageFooterType = z.infer<typeof PageFooterSchema>;

@@ -1,0 +1,76 @@
+{
+  "header": {
+    "headline": "Privacy Policy",
+    "lastUpdated": {
+      "text": "Last updated: ",
+      "date": "January 18, 2026"
+    },
+    "description": "This page describes how Clipposaurus collects, uses, and protects your information when you use our web-based content sharing service."
+  },
+  "sections": [
+    {
+      "id": "1",
+      "title": "Information We Collect",
+      "description": "We use Vercel Analytics to collect anonymous usage data, including page views, visitor interactions, and performance metrics. This data helps us improve our service and user experience. We also use Vercel Speed Insights to monitor and optimize the performance of our website.",
+      "links": [
+        {
+          "text": "Vercel Analytics",
+          "href": "https://vercel.com/docs/analytics"
+        },
+        {
+          "text": "Vercel Speed Insights",
+          "href": "https://vercel.com/docs/speed-insights"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "How We Use Your Information",
+      "description": "The information collected through Vercel Analytics and Speed Insights is used solely for analytical purposes to enhance our service, fix issues, and make data-driven improvements. We do not collect personal information or track individual users.",
+      "links": [
+        {
+          "text": "Vercel Analytics",
+          "href": "https://vercel.com/docs/analytics"
+        },
+        {
+          "text": "Speed Insights",
+          "href": "https://vercel.com/docs/speed-insights"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Data Sharing and Disclosure",
+      "description": "We do not share, sell, or disclose any collected data to third parties. Vercel Analytics and Speed Insights data is processed by Vercel in accordance with their privacy policies.",
+      "links": [
+        {
+          "text": "Vercel Analytics",
+          "href": "https://vercel.com/docs/analytics"
+        },
+        {
+          "text": "Speed Insights",
+          "href": "https://vercel.com/docs/speed-insights"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Data Retention",
+      "description": "Analytics data is retained according to Vercel's retention policies. We do not store personal data, and shared content is automatically deleted after expiration."
+    },
+    {
+      "id": "5",
+      "title": "Your Rights",
+      "description": "Since we do not collect personal information, there are no personal data rights to exercise. You can opt out of analytics tracking through your browser settings or by using privacy extensions."
+    },
+    {
+      "id": "6",
+      "title": "Changes to This Policy",
+      "description": "We may update this Privacy Policy from time to time. We will notify users of any significant changes by updating the 'Last updated' date."
+    }
+  ],
+  "footer": {
+    "text": "Need any help?",
+    "buttonText": "Contact Us"
+  }
+}

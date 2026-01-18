@@ -6,16 +6,17 @@ import type { HeroComponentType } from "@/components/home/hero/Hero.types";
 import type { HowItWorksComponentType } from "@/components/home/how-it-works/HowItWorks.types";
 import type { WhatCanShareComponentType } from "@/components/home/what-can-share/WhatCanShare.types";
 import type { PrivacyComponentType } from "@/components/home/privacy/Privacy.types";
-import { TermsOfServiceComponent } from "@/types";
-import { FAQComponent } from "@/types";
-import { FeaturesComponent } from "@/types";
-import { SecurityComponent } from "@/types";
-import { CTAComponent } from "@/types";
+import type { TermsOfServiceComponent } from "@/types";
+import type { PrivacyPolicyComponentType } from "@/components/privacy-policy/PrivacyPolicy.types";
+import type { FAQComponent } from "@/types";
+import type { FeaturesComponent } from "@/types";
+import type { SecurityComponent } from "@/types";
+import type { CTAComponent } from "@/types";
 import type { FooterComponent } from "@/components/footer/footer.types";
 import type { NavbarComponent } from "@/components/navbar/navbar.types";
 import type { ComparisonComponent } from "@/components/home/comparison/Comparison.types";
 
-export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponent | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent;
+export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponent | PrivacyPolicyComponentType | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent;
 
 export type ComponentTypeMap = {
     HeroComponent: HeroComponentType;
@@ -23,6 +24,7 @@ export type ComponentTypeMap = {
     WhatCanShareComponent: WhatCanShareComponentType;
     PrivacyComponent: PrivacyComponentType;
     TermsOfServiceComponent: TermsOfServiceComponent;
+    PrivacyPolicyComponent: PrivacyPolicyComponentType;
     FAQComponent: FAQComponent;
     FeaturesComponent: FeaturesComponent;
     SecurityComponent: SecurityComponent;
@@ -200,6 +202,22 @@ export function useTermsOfServiceComponent() {
         data: cachedData.TermsOfServiceComponent as TermsOfServiceComponent,
         isLoading: loadingStates.TermsOfServiceComponent || false,
         error: errorStates.TermsOfServiceComponent,
+    };
+}
+
+export function usePrivacyPolicyComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.PrivacyPolicyComponent && !loadingStates.PrivacyPolicyComponent && !errorStates.PrivacyPolicyComponent) {
+            getComponentData("PrivacyPolicyComponent").catch(console.error);
+        }
+    }, [cachedData.PrivacyPolicyComponent, loadingStates.PrivacyPolicyComponent, errorStates.PrivacyPolicyComponent, getComponentData]);
+
+    return {
+        data: cachedData.PrivacyPolicyComponent as PrivacyPolicyComponentType,
+        isLoading: loadingStates.PrivacyPolicyComponent || false,
+        error: errorStates.PrivacyPolicyComponent,
     };
 }
 

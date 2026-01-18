@@ -43,6 +43,40 @@ export const HowItWorksComponentSchema = z.object({
   cta: HowItWorksCTASchema,
 });
 
+const lastUpdatedSchema = z.object({
+  text: z.string(),
+  date: z.string(),
+});
+
+// Common Page Header
+export const PageHeaderSchema = z.object({
+  headline: z.string(),
+  lastUpdated: lastUpdatedSchema,
+  description: z.string(),
+});
+
+const LinkSchema = z.object({
+  text: z.string(),
+  href: z.string(),
+});
+
+const SectionSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  description: z.string(),
+});
+
+const ExtentedSectionSchema = SectionSchema.extend({
+  links: z.array(LinkSchema).optional(),
+});
+
+export const PageSectionsSchema = z.array(ExtentedSectionSchema);
+
+export const PageFooterSchema = z.object({
+  text: z.string(),
+  buttonText: z.string(),
+});
+
 // FAQ
 const FAQQuestionSchema = z.object({
   question: z.string(),
@@ -74,6 +108,13 @@ export const TermsOfServiceComponentSchema = z.object({
   headline: z.string(),
   lastUpdated: z.string(),
   sections: z.array(AccordionItemSchema),
+});
+
+// Privacy Policy
+export const PrivacyPolicyComponentSchema = z.object({
+  header: PageHeaderSchema,
+  sections: PageSectionsSchema,
+  footer: PageFooterSchema,
 });
 
 // CTA
@@ -111,7 +152,7 @@ export const FooterComponentSchema = z.object({
     z.object({
       category: z.string(),
       links: z.array(z.string()),
-    })
+    }),
   ),
   copyrightNote: z.string(),
 });
