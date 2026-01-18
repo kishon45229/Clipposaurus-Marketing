@@ -1,6 +1,6 @@
 {
-  "headline": "Terms and Conditions",
-  "lastUpdated": "January 01, 2026",
+  "headline": "Terms of Service",
+  "lastUpdated": "January 18, 2026",
   "sections": [
     {
       "id": "1",
@@ -30,7 +30,7 @@
     {
       "id": "6",
       "title": "Privacy and Security",
-      "description": "We prioritize your privacy. Shared content is encrypted, and we do not store personal information unless necessary for service operation. Please refer to our Privacy Policy for details on data handling."
+      "description": "We prioritize your privacy. Shared content is encrypted, and we do not store personal information unless necessary for service operation. We use Vercel Analytics to track visitors and page views for improving our service."
     },
     {
       "id": "7",
