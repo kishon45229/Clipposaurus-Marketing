@@ -99,7 +99,7 @@ export const FAQComponentSchema = z.object({
 
 // Terms of Service
 export const TermsOfServiceComponentSchema = z.object({
- header: PageHeaderSchema,
+  header: PageHeaderSchema,
   sections: PageSectionsSchema,
   footer: PageFooterSchema,
 });
@@ -296,4 +296,33 @@ export const ComparisonComponentSchema = z.object({
   }),
   ctaText: z.string(),
   ctaHelper: z.string(),
+});
+
+// About
+const AboutHeaderSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+});
+
+const AboutBodySchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  donation: z.object({
+    title: z.string(),
+    description: z.string(),
+    ctaText: z.string(),
+  }),
+});
+
+const AboutFooterSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  githubText: z.string(),
+  contactText: z.string(),
+});
+
+export const AboutComponentSchema = z.object({
+  header: AboutHeaderSchema,
+  body: AboutBodySchema,
+  footer: AboutFooterSchema,
 });

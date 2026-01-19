@@ -15,8 +15,9 @@ import type { CTAComponent } from "@/types";
 import type { FooterComponent } from "@/components/footer/footer.types";
 import type { NavbarComponent } from "@/components/navbar/navbar.types";
 import type { ComparisonComponent } from "@/components/home/comparison/Comparison.types";
+import type { AboutComponentType } from "@/components/about/about.types";
 
-export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponentType | PrivacyPolicyComponentType | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent;
+export type ComponentDataType = HeroComponentType | HowItWorksComponentType | WhatCanShareComponentType | TermsOfServiceComponentType | PrivacyPolicyComponentType | FAQComponent | FeaturesComponent | SecurityComponent | CTAComponent | NavbarComponent | FooterComponent | PrivacyComponentType | ComparisonComponent | AboutComponentType;
 
 export type ComponentTypeMap = {
     HeroComponent: HeroComponentType;
@@ -33,6 +34,7 @@ export type ComponentTypeMap = {
     NavbarComponent: NavbarComponent;
 
     ComparisonComponent: ComparisonComponent;
+    AboutComponent: AboutComponentType;
 };
 
 interface ComponentDataContextType {
@@ -347,5 +349,21 @@ export function useComparisonComponent() {
         data: cachedData.ComparisonComponent as ComparisonComponent,
         isLoading: loadingStates.ComparisonComponent || false,
         error: errorStates.ComparisonComponent,
+    };
+}
+
+export function useAboutComponent() {
+    const { getComponentData, cachedData, loadingStates, errorStates } = useComponentData();
+
+    React.useEffect(() => {
+        if (!cachedData.AboutComponent && !loadingStates.AboutComponent && !errorStates.AboutComponent) {
+            getComponentData("AboutComponent").catch(console.error);
+        }
+    }, [cachedData.AboutComponent, loadingStates.AboutComponent, errorStates.AboutComponent, getComponentData]);
+
+    return {
+        data: cachedData.AboutComponent as AboutComponentType,
+        isLoading: loadingStates.AboutComponent || false,
+        error: errorStates.AboutComponent,
     };
 }

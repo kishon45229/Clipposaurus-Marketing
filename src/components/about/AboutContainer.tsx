@@ -1,14 +1,18 @@
 "use client";
 
 import React from "react";
-import { AboutHeader } from "./AboutHeader";
-import { AboutContent } from "./AboutContent";
+import { useAbout } from "@/contexts/AboutContext";
+import { ComponentError } from "@/components/common/ComponentError";
+import { AboutContent } from "@/components/about/AboutContent";
+import { AboutSkeleton } from "@/components/about/AboutSkeleton";
+
+const COMPONENT_ID = "AboutComponent" as const;
 
 export const AboutContainer = (): React.ReactNode => {
-    return (
-        <div className="space-y-8 px-4 sm:px-6 lg:px-8">
-            <AboutHeader />
-            <AboutContent />
-        </div>
-    );
+    const { data, isLoading, error } = useAbout();
+
+    if (isLoading || !data) return <AboutSkeleton />;
+    if (error) return <ComponentError componentId={COMPONENT_ID} />;
+
+    return <AboutContent />;
 };

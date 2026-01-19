@@ -10,6 +10,7 @@ export const COMPONENT_ORIGINS = [
   "WhatCanShareComponent",
   "PrivacyComponent",
   "ComparisonComponent",
+  "AboutComponent",
 ];
 
 export function isValidOrigin(origin: string): boolean {

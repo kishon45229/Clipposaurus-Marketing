@@ -1,0 +1,21 @@
+{
+  "header": {
+    "title": "About Clipposaurus",
+    "subtitle": "Open-source, privacy-first, and built on trust"
+  },
+  "body": {
+    "title": "Why Clipposaurus Exists",
+    "description": "Clipposaurus is an open-source project built with a clear purpose: to create software people can trust. We are not driven by profit, ads, or data collection. Instead, we focus on building reliable tools that respect user privacy, remain transparent by design, and solve real-world problems. Every line of code is open, security is a priority, and our decisions are guided by what benefits the community—not shareholders.",
+    "donation": {
+      "title": "Supporting the Project",
+      "description": "Clipposaurus will always remain free and open-source. If you find the project useful and would like to support its continued development, optional donations help cover infrastructure costs, security improvements, and long-term maintenance. Contributions are never required, but always appreciated.",
+      "ctaText": "Support the Project"
+    }
+  },
+  "footer": {
+    "title": "Join the Community",
+    "description": "Clipposaurus grows through community involvement. Whether you contribute code, report issues, suggest improvements, donate, or simply use the tools, you’re helping shape a project built on openness and trust.",
+    "githubText": "View the Code on GitHub",
+    "contactText": "Get in Touch"
+  }
+}

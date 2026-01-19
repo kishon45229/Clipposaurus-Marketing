@@ -11,6 +11,7 @@ import {
   WhatCanShareComponentSchema,
   PrivacyComponentSchema,
   ComparisonComponentSchema,
+  AboutComponentSchema,
 } from "@/lib/schema";
 
 export const COMPONENT_SCHEMAS: Record<string, z.ZodSchema> = {
@@ -25,4 +26,5 @@ export const COMPONENT_SCHEMAS: Record<string, z.ZodSchema> = {
   NavbarComponent: NavbarComponentSchema,
   WhatCanShareComponent: WhatCanShareComponentSchema,
   ComparisonComponent: ComparisonComponentSchema,
+  AboutComponent: AboutComponentSchema,
 };
