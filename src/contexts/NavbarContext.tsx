@@ -13,6 +13,7 @@ export interface NavbarContextValue {
     handleRedirectToDocs: () => void;
     handleRedirectToChangelog: () => void;
     handleRedirectToTermsOfService: () => void;
+    handleRedirectToPrivacyPolicy: () => void;
     handleRedirectToGitHub: () => void;
     handleRedirectToFAQ: () => void;
     handleContactUs: () => void;
@@ -28,7 +29,7 @@ interface NavbarProviderProps {
 
 export function NavbarProvider({ children }: NavbarProviderProps): React.ReactElement {
     const { data, isLoading, error } = useNavbarComponent();
-    const { handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useRedirects();
+    const { handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToPrivacyPolicy, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useRedirects();
 
     const contextValue: NavbarContextValue = React.useMemo(() => ({
         data,
@@ -37,12 +38,13 @@ export function NavbarProvider({ children }: NavbarProviderProps): React.ReactEl
         handleRedirectToDocs,
         handleRedirectToChangelog,
         handleRedirectToTermsOfService,
+        handleRedirectToPrivacyPolicy,
         handleRedirectToGitHub,
         handleRedirectToFAQ,
         handleContactUs,
         handleRedirectToGitHubIssues,
         handleRedirectToGitHubSponsor,
-    }), [data, isLoading, error, handleContactUs, handleRedirectToChangelog, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToGitHub, handleRedirectToTermsOfService, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor]);
+    }), [data, isLoading, error, handleContactUs, handleRedirectToChangelog, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToGitHub, handleRedirectToTermsOfService, handleRedirectToPrivacyPolicy, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor]);
 
     return (
         <NavbarContext.Provider value={contextValue}>

@@ -6,7 +6,7 @@ import { FooterBottomBar } from "@/components/footer/FooterBottomBar";
 import { FooterColumn } from "@/components/footer/FooterColumn";
 
 export const FooterContent = () => {
-    const { data, handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToGitHubDiscussions, handleRedirectToCreateDrop, handleRedirectToUnlockDrop } = useFooter();
+    const { data, handleRedirectToDocs, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToPrivacyPolicy, handleRedirectToGitHub, handleRedirectToFAQ, handleContactUs, handleRedirectToGitHubDiscussions, handleRedirectToCreateDrop, handleRedirectToUnlockDrop } = useFooter();
     const { columns } = data;
     const redirectHandlers = {
         "Create Drop": handleRedirectToCreateDrop,
@@ -16,6 +16,7 @@ export const FooterContent = () => {
         "FAQ": handleRedirectToFAQ,
         "GitHub": handleRedirectToGitHub,
         "Terms of Service": handleRedirectToTermsOfService,
+        "Privacy Policy": handleRedirectToPrivacyPolicy,
         "GitHub Discussions": handleRedirectToGitHubDiscussions,
     };
 

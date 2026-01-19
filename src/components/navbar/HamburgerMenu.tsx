@@ -20,17 +20,18 @@ import {
     HeartHandshake,
     FileText,
     Mail,
+    Shield,
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export const HamburgerMenu = () => {
     const stars = useGitHubStars();
-    const { data, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToTermsOfService, handleContactUs, handleRedirectToChangelog, handleRedirectToGitHub, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useNavbar();
+    const { data, handleRedirectToDocs, handleRedirectToFAQ, handleRedirectToTermsOfService, handleRedirectToPrivacyPolicy, handleContactUs, handleRedirectToChangelog, handleRedirectToGitHub, handleRedirectToGitHubIssues, handleRedirectToGitHubSponsor } = useNavbar();
 
     const { menus } = data;
     const { hamburger } = menus;
-    const { openMenu, documentation, faq, termsOfService, changelog, github, reportIssue, contactUs, supportProject } = hamburger;
+    const { openMenu, documentation, faq, termsOfService, privacyPolicy, changelog, github, reportIssue, contactUs, supportProject } = hamburger;
 
     return (
         <DropdownMenu>
@@ -107,6 +108,15 @@ export const HamburgerMenu = () => {
                 >
                     <FileText className="hamburger-menu-icon-item" />
                     {termsOfService}
+                </DropdownMenuItem>
+
+                {/* Privacy Policy */}
+                <DropdownMenuItem
+                    onClick={handleRedirectToPrivacyPolicy}
+                    className="hamburger-menu-item"
+                >
+                    <Shield className="hamburger-menu-icon-item" />
+                    {privacyPolicy}
                 </DropdownMenuItem>
 
                 {/* Contact Us */}

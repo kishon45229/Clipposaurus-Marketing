@@ -24,6 +24,10 @@
         "title": "Terms of Service",
         "description": "Read our terms and conditions"
       },
+      "privacyPolicy": {
+        "title": "Privacy Policy",
+        "description": "Learn how we handle your data"
+      },
       "support": {
         "title": "Support the Project",
         "description": "Help keep Clipposaurus free"
@@ -51,6 +55,7 @@
       "changelog": "Changelog",
       "reportIssue": "Report an Issue",
       "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
       "contactUs": "Contact Us",
       "supportProject": "Support the Project"
     }

@@ -178,6 +178,10 @@ export const NavbarComponentSchema = z.object({
         title: z.string(),
         description: z.string(),
       }),
+      privacyPolicy: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
       support: z.object({
         title: z.string(),
         description: z.string(),
@@ -205,6 +209,7 @@ export const NavbarComponentSchema = z.object({
       changelog: z.string(),
       reportIssue: z.string(),
       termsOfService: z.string(),
+      privacyPolicy: z.string(),
       contactUs: z.string(),
       supportProject: z.string(),
     }),

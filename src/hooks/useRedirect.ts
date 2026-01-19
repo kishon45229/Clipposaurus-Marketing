@@ -24,6 +24,7 @@ interface RedirectsReturn {
   handleRedirectToChangelog: () => void;
   handleRedirectToGitHubIssues: () => void;
   handleRedirectToTermsOfService: () => void;
+  handleRedirectToPrivacyPolicy: () => void;
   handleContactUs: () => void;
   handleRedirectToGitHubSponsor: () => void;
   handleRedirectToGitHubDiscussions: () => void;
@@ -88,6 +89,10 @@ export function useRedirects(): RedirectsReturn {
   // TERMS OF SERVICE
   const handleRedirectToTermsOfService = React.useCallback(() => {
     window.location.href = "/terms-of-service";
+  }, []);
+
+  const handleRedirectToPrivacyPolicy = React.useCallback(() => {
+    window.location.href = "/privacy-policy";
   }, []);
 
   // CONTACT US
@@ -160,6 +165,7 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToChangelog,
     handleRedirectToGitHubIssues,
     handleRedirectToTermsOfService,
+    handleRedirectToPrivacyPolicy,
     handleContactUs,
     handleRedirectToGitHubSponsor,
     handleRedirectToGitHubDiscussions,

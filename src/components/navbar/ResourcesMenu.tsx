@@ -1,7 +1,7 @@
 "use client";
 
 import { useNavbar } from "@/contexts/NavbarContext";
-import { ScrollText, FileText, HeartHandshake } from "lucide-react";
+import { ScrollText, FileText, HeartHandshake, Shield } from "lucide-react";
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -12,11 +12,11 @@ import {
 import { NavItem } from "@/components/navbar/NavItem";
 
 export const ResourcesMenu = () => {
-    const { data, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToGitHubSponsor } = useNavbar();
+    const { data, handleRedirectToChangelog, handleRedirectToTermsOfService, handleRedirectToPrivacyPolicy, handleRedirectToGitHubSponsor } = useNavbar();
     const { links, menus } = data;
     const { resources } = links;
     const { resourcesDropDown } = menus;
-    const { changelog, terms, support } = resourcesDropDown;
+    const { changelog, terms, privacyPolicy, support } = resourcesDropDown;
 
     return (
         <NavigationMenu viewport={false} className="relative z-50">
@@ -38,6 +38,12 @@ export const ResourcesMenu = () => {
                                 icon={FileText}
                                 title={terms.title}
                                 description={terms.description}
+                            />
+                            <NavItem
+                                onClick={handleRedirectToPrivacyPolicy}
+                                icon={Shield}
+                                title={privacyPolicy.title}
+                                description={privacyPolicy.description}
                             />
                             <li className="h-px my-2 bg-zinc-200 dark:bg-zinc-800" />
                             <NavItem
