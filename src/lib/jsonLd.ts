@@ -1,59 +1,16 @@
-export function getSiteJsonLd() {
-  const url =
-    process.env.NODE_ENV === "production"
-      ? process.env.NEXT_PUBLIC_PRODUCTION_BASE_URL
-      : process.env.NEXT_PUBLIC_DEVELOPMENT_BASE_URL;
+import { APP_URL } from "@/lib/urls";
 
+export function getSiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": `${url}/#website`,
-        name: "Clipposaurus",
-        description:
-          "Secure zero-knowledge text and code sharing platform with end-to-end encryption, no account required, and auto-expiring drops",
-        url,
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${url}/faq?search={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
-        publisher: {
-          "@id": `${url}/#organization`,
-        },
-      },
-      {
-        "@type": "Organization",
-        "@id": `${url}/#organization`,
-        name: "Clipposaurus",
-        url,
-        logo: {
-          "@type": "ImageObject",
-          url: `${url}/logo.png`,
-          width: "512",
-          height: "512",
-        },
-        sameAs: [
-          // Add your social media profiles here
-          // "https://twitter.com/clipposaurus",
-          // "https://github.com/clipposaurus",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Support",
-          email: "support@clipposaurus.com",
-          availableLanguage: ["en"],
-        },
-      },
-      {
         "@type": "WebApplication",
-        "@id": `${url}/#webapplication`,
+        "@id": `${APP_URL}/#webapplication`,
         name: "Clipposaurus",
-        url,
+        url: APP_URL,
+        description:
+          "Privacy focused text and code sharing platform with zero-knowledge encryption and no account required",
         applicationCategory: "SecurityApplication",
         applicationSubCategory: "Content Sharing",
         operatingSystem: "Any",
@@ -63,35 +20,60 @@ export function getSiteJsonLd() {
           price: "0",
           priceCurrency: "USD",
         },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          ratingCount: "150",
-          bestRating: "5",
-          worstRating: "1",
-        },
         featureList: [
           "Zero-knowledge encryption",
           "No account required",
           "Auto-expiring drops",
           "Code snippet sharing",
-          "Cross-device sync",
+          "Text or notes sharing",
           "End-to-end encryption",
         ],
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: 4.8,
+          reviewCount: 150,
+        },
+        potentialAction: [
+          {
+            "@type": "CreateAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${APP_URL}/create-drop`,
+              actionPlatform: [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform",
+              ],
+            },
+            name: "Create Drop",
+          },
+          {
+            "@type": "ViewAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${APP_URL}/open-drop`,
+              actionPlatform: [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform",
+              ],
+            },
+            name: "Open Drop",
+          },
+        ],
+        publisher: {
+          "@id": `${APP_URL}/#organization`,
+        },
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Organization",
+        "@id": `${APP_URL}/#organization`,
         name: "Clipposaurus",
-        applicationCategory: "WebApplication",
-        applicationSubCategory: "Content Sharing & Collaboration",
-        operatingSystem: "Web Browser",
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
+        url: "https://clipposaurus.com",
+        logo: {
+          "@type": "ImageObject",
+          url: `${APP_URL}/logo.png`,
+          width: "512",
+          height: "512",
         },
-        description:
-          "Secure, zero-knowledge text and code sharing platform with end-to-end encryption",
       },
     ],
   };
