@@ -10,7 +10,7 @@ export const AboutHeader = (): React.ReactNode => {
     const { title, subtitle } = header;
 
     return (
-        <div className="text-center space-y-6 py-8">
+        <div className="text-center space-y-6 py-4">
             <div className="flex justify-center">
                 <div className="relative w-24 h-24 sm:w-32 sm:h-32">
                     <Image
@@ -22,7 +22,7 @@ export const AboutHeader = (): React.ReactNode => {
                     />
                 </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
                     {title}
                 </h1>

@@ -14,8 +14,8 @@ export const AboutFooter = (): React.ReactNode => {
     const { title, description, githubText, contactText } = footer;
 
     return (
-        <div className="max-w-4xl mx-auto py-12">
-            <div className="bg-gradient-to-br from-emerald-500/5 to-emerald-400/10 dark:from-emerald-500/10 dark:to-emerald-400/5 border-2 border-emerald-500/20 dark:border-emerald-500/30 p-8 sm:p-12">
+        <div className="max-w-4xl mx-auto py-6 sm:py-12">
+            <div className="bg-gradient-to-br from-emerald-500/5 to-emerald-400/10 dark:from-emerald-500/10 dark:to-emerald-400/5 border-2 border-emerald-500/20 dark:border-emerald-500/30 rounded-3xl p-8 sm:p-12">
                 <div className="text-center space-y-8">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">

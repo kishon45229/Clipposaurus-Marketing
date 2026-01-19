@@ -4,8 +4,16 @@
     "subtitle": "Open-source, privacy-first, and built on trust"
   },
   "body": {
-    "title": "Why Clipposaurus Exists",
-    "description": "Clipposaurus is an open-source project built with a clear purpose: to create software people can trust. We are not driven by profit, ads, or data collection. Instead, we focus on building reliable tools that respect user privacy, remain transparent by design, and solve real-world problems. Every line of code is open, security is a priority, and our decisions are guided by what benefits the community—not shareholders.",
+    "title": "A Simple Idea from a Common Struggle",
+    "story": {
+      "paragraph1": "Hi, I'm Kishon, the developer behind Clipposaurus. The idea for Clipposaurus was born in a place many students know very well: college lab sessions.",
+      "paragraph2": "During my bachelor's degree, lecturers often needed to share files, notes, or code snippets required for lab sessions. Most of the time, they used the campus LMS. On lab computers, this meant logging in with a long email address, a complicated password, and then completing two-step verification.",
+      "paragraph3": "In reality, this small task was frustrating. By the time we logged in, one or two minutes of the lab session were already gone. Around me, I saw the same struggle every time — students forgetting passwords, waiting for verification codes, or searching for their phones.",
+      "paragraph4": "And this didn't happen once or twice. It happened in almost every lab session. To make it worse, we also had to log out at the end of each session.",
+      "paragraph5": "One day, I asked a simple question: why is sharing a small note, code snippet, or file so complicated? What if content could be shared without accounts, passwords, logins, or unnecessary steps?",
+      "paragraph6": "That question became an idea. That idea slowly turned into Clipposaurus.",
+      "paragraph7": "Today, Clipposaurus is built to remove that friction completely. No sign-ups. No logins. No tracking. Just a fast, simple way to share content—so you can spend less time logging in and more time learning, teaching, or building."
+    },
     "donation": {
       "title": "Supporting the Project",
       "description": "Clipposaurus will always remain free and open-source. If you find the project useful and would like to support its continued development, optional donations help cover infrastructure costs, security improvements, and long-term maintenance. Contributions are never required, but always appreciated.",
@@ -14,7 +22,7 @@
   },
   "footer": {
     "title": "Join the Community",
-    "description": "Clipposaurus grows through community involvement. Whether you contribute code, report issues, suggest improvements, donate, or simply use the tools, you’re helping shape a project built on openness and trust.",
+    "description": "Clipposaurus grows through community involvement. Whether you contribute code, report issues, suggest improvements, donate, or simply use the tools, you're helping shape a project built on openness and trust.",
     "githubText": "View the Code on GitHub",
     "contactText": "Get in Touch"
   }

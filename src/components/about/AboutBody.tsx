@@ -9,17 +9,21 @@ export const AboutBody = (): React.ReactNode => {
     const { data, handleRedirectToGitHubSponsor } = useAbout();
 
     const { body } = data;
-    const { title, description, donation } = body;
+    const { title, story, donation } = body;
     const { title: donationTitle, description: donationDescription, ctaText } = donation;
 
     return (
-        <div className="max-w-4xl mx-auto space-y-6 py-4">
-            <div className="space-y-6">
-                <div className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100 text-center">
+        <div className="max-w-6xl mx-auto space-y-6 py-4">
+            <div className="space-y-4">
+                <div className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-100 text-center">
                     {title}
                 </div>
-                <div className="text-lg sm:text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed text-center">
-                    {description}
+                <div className="text-sm sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed text-center">
+                    {Object.values(story).map((paragraph, index) => (
+                        <p key={index} className="mb-4">
+                            {paragraph}
+                        </p>
+                    ))}
                 </div>
             </div>
 

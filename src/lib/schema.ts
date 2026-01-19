@@ -306,7 +306,15 @@ const AboutHeaderSchema = z.object({
 
 const AboutBodySchema = z.object({
   title: z.string(),
-  description: z.string(),
+  story: z.object({
+    paragraph1: z.string(),
+    paragraph2: z.string(),
+    paragraph3: z.string(),
+    paragraph4: z.string(),
+    paragraph5: z.string(),
+    paragraph6: z.string(),
+    paragraph7: z.string(),
+  }),
   donation: z.object({
     title: z.string(),
     description: z.string(),
