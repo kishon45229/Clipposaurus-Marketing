@@ -3,7 +3,9 @@ Allow: /
 Allow: /about
 Allow: /faq
 Allow: /terms-of-service
+Allow: /privacy-policy
 Allow: /contact
+Allow: /sitemap.xml
 
 Disallow: /api/
 Disallow: /_next/
