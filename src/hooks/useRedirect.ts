@@ -34,6 +34,7 @@ interface RedirectsReturn {
   handleRedirectToDocsZeroKnowledgePolicy: () => void;
   handleRedirectToDocsHowItWorks: () => void;
   handleRedirectToDocsQuickstart: () => void;
+  handleRedirectToAbousUs: () => void;
 }
 
 export function useRedirects(): RedirectsReturn {
@@ -98,6 +99,10 @@ export function useRedirects(): RedirectsReturn {
   // CONTACT US
   const handleContactUs = React.useCallback(() => {
     window.location.href = `mailto:${CONTACT_EMAIL}`;
+  }, []);
+
+  const handleRedirectToAbousUs = React.useCallback(() => {
+    window.location.href = "/about";
   }, []);
 
   // GITHUB DISCUSSIONS
@@ -175,5 +180,6 @@ export function useRedirects(): RedirectsReturn {
     handleRedirectToDocsZeroKnowledgePolicy,
     handleRedirectToDocsHowItWorks,
     handleRedirectToDocsQuickstart,
+    handleRedirectToAbousUs
   };
 }
