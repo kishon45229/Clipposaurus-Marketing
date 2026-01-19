@@ -2,7 +2,6 @@ import React from "react";
 import { FAQContainer } from "@/components/faq/FAQContainer";
 import LoadingFallback from "@/app/loading";
 import { FAQProvider } from "@/contexts/FAQContext";
-import { FAQSchema } from "@/components/faq/FAQSchema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -31,7 +30,6 @@ export default function FAQPage(): React.ReactElement {
     return (
         <React.Suspense fallback={<LoadingFallback />}>
             <FAQProvider>
-                <FAQSchema />
                 <section className="min-h-screen max-w-7xl mx-auto py-2 sm:py-4">
                     <FAQContainer />
                 </section>
