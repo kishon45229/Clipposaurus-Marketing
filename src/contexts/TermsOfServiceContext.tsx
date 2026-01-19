@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useTermsOfServiceComponent } from "@/contexts/ComponentDataContext";
-import { TermsOfServiceComponent } from "@/types";
+import { TermsOfServiceComponentType } from "@/components/terms-of-service/TermsOfService.types";
 
 interface TermsOfServiceContextType {
-    data: TermsOfServiceComponent;
+    data: TermsOfServiceComponentType;
     isLoading: boolean;
     error: Error | null;
 }

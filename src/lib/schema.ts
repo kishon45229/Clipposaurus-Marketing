@@ -98,16 +98,10 @@ export const FAQComponentSchema = z.object({
 });
 
 // Terms of Service
-const AccordionItemSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  description: z.string(),
-});
-
 export const TermsOfServiceComponentSchema = z.object({
-  headline: z.string(),
-  lastUpdated: z.string(),
-  sections: z.array(AccordionItemSchema),
+ header: PageHeaderSchema,
+  sections: PageSectionsSchema,
+  footer: PageFooterSchema,
 });
 
 // Privacy Policy

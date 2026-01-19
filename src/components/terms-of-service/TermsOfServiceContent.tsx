@@ -4,12 +4,13 @@ import React from "react";
 import { useTermsOfService } from "@/contexts/TermsOfServiceContext";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { StickyTOC } from "@/components/common/StickyTOC";
-import { TermsOfServiceHeader } from "@/components/terms-of-service/TermsOfServiceHeader";
-import { TermsOfServiceSections } from "@/components/terms-of-service/TermsOfServiceSections";
+import { PageHeader } from "@/components/common/PageHeader";
+import { PageFooter } from "@/components/common/PageFooter";
+import { PageSections } from "@/components/common/PageSections";
 
 export const TermsOfServiceContent = (): React.ReactNode => {
     const { data } = useTermsOfService();
-    const { sections } = data;
+    const { header, sections, footer } = data;
 
     const sectionIds = React.useMemo(() =>
         sections.map(section => `section-${section.id}`),
@@ -25,16 +26,19 @@ export const TermsOfServiceContent = (): React.ReactNode => {
 
     return (
         <div className="mx-auto max-w-480px-4 py-2 grid grid-cols-1 lg:grid-cols-[240px_auto] gap-[clamp(2rem,5vw,2.5rem)]">
-            {/* Sticky TOC — Desktop only */}
+            {/* STICKY TOC */}
             <StickyTOC title="On this page" items={items} activeSection={activeSection} />
 
-            {/* Main content */}
+            {/* MAIN CONTENT */}
             <div className="max-w-7xl border-l border-zinc-200 dark:border-zinc-800 pl-6">
-                {/* Header */}
-                <TermsOfServiceHeader />
+                {/* HEADER */}
+                <PageHeader header={header} />
 
-                {/* Sections */}
-                <TermsOfServiceSections />
+                {/* SECTIONS */}
+                <PageSections sections={sections} />
+
+                {/* FOOTER */}
+                <PageFooter footer={footer} />
             </div>
         </div>
     );
