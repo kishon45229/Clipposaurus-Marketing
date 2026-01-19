@@ -30,7 +30,7 @@ export const TermsOfServiceContent = (): React.ReactNode => {
             <StickyTOC title="On this page" items={items} activeSection={activeSection} />
 
             {/* MAIN CONTENT */}
-            <div className="max-w-7xl border-l border-zinc-200 dark:border-zinc-800 pl-6">
+            <div className="max-w-7xl border-l border-zinc-200 dark:border-zinc-800 px-6">
                 {/* HEADER */}
                 <PageHeader header={header} />
 

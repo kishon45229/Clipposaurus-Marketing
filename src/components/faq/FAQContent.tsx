@@ -27,7 +27,7 @@ export const FAQContent = (): React.ReactNode => {
             <StickyTOC title="Categories" items={items} activeSection={activeSection} />
 
             {/* Main content */}
-            <div className="max-w-7xl">
+            <div className="max-w-7xl border-l border-zinc-200 dark:border-zinc-800 px-6">
                 <FAQHeader />
                 <FAQCategory />
             </div>
